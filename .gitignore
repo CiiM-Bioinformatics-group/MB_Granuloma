@@ -1,2 +1,7 @@
-data/*
-venv*
+data/
+venv/
+venv_old/
+*.pyc
+__pycache__/
+*.sqlite3
+*.h5ad
