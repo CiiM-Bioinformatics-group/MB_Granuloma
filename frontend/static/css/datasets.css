@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+ 
+  /* ul {
+    list-style: none;
+  }*/
+  
+  .header{
+    width: 80%; /* 可以根据需要调整宽度 */
+    background-color: transparent;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+  }
+  
+  .navbar {
+    display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      width: 80%; /* 根据需要调整宽度 */
+      max-width: 1200px; /* 限制最大宽度 */
+      margin: 0 auto; /* 确保水平居中 */
+  }
+  
+  .nav-image {
+    height: 50px;
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+  
+    border-radius: 5px;
+  }
+  
+  .nav-links .active a {
+    font-weight: bold; /* 加粗显示 */
+  }
+
+
+
+
+.bg1 {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.bg2 {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../images/pg6.jpg");
+  border-color: #666666;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: 'Roboto', 'Roboto Fallback', sans-serif; /* 设置全局字体 */
+  padding-top: 80px; /* 增加上边距，使内容远离 header */
+
+}
+
+.text-wrap {
+  width: 200px; /* 宽度限制 */
+  word-wrap: break-word; /* 单词溢出时换行 */
+  white-space: pre-line; /* 保留换行符和空格，忽略额外的空格 */
+}
+
+body > header {
+  z-index: 90;
+  width: 100%;
+  height: 117px;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  transition: 0.15s;
+}
+body > header > img {
+  width: 90px;
+}
+body > header > ul {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  display: flex;
+  gap: 40px;
+}
+body > header > ul > li {
+  transition: 0.15s;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+body > header > ul > li:hover {
+  border-bottom-color: #fff;
+}
+body > header > svg {
+  margin-left: auto;
+  margin-right: 5rem;
+  width: 64px;
+  height: 64px;
+}
+
+main {
+  width: 65%;
+  margin: 100px auto; /* 居中对齐，并增加上下边距 */
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 70px;
+  text-align: center; /* 将段落和标题都居中对齐 */
+  padding: 20px; /* Optional: Add some padding around the image */
+}
+
+section h2 {
+  text-align: left;
+  border-bottom: 1px solid #808080;
+  padding-bottom: 10px; /* 可选：增加一点底部间距 */
+  font-size: 2rem;
+  margin-bottom: 36px;
+}
+
+section p {
+  line-height: 1.6;
+  color: #fff;
+}
+
+section:first-of-type h2 {
+  text-align: left;
+}
+
+section:first-of-type p {
+  text-align: left;
+}
+
+.content {
+  text-align: center;
+  color: white; /* Set the text color to white to contrast with the black background */
+  
+}
+
+img {
+  margin-top: 25px;
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 20px; /* Adds some space below the Human Archive image */
+}
+
+.horizontal-images {
+  display: flex;
+  align-items: center;
+  margin-top: 40px; /* Adds vertical space above the horizontal image group */
+}
+
+
+.left-img {
+  display: block;
+  margin: 30px 3% 0 15%; /* Adds some space above the left-aligned image and moves it right  */ 
+  
+  align-self: flex-start; /* Align the image to the left within the container */
+  width: 12%; /* Adjust this value to make the image smaller */
+}
+
+.right-img {
+  margin: 25px 20 0 15%; /* Adds some space above the left-aligned image and moves it right  */
+  width: 60%; /* Adjust this value as needed */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column; /* Arrange buttons in a column */
+  margin-left: 20px; /* Adds space between images and buttons */
+}
+
+.buttons button {
+  margin-bottom: 15px; /* Adds space between the buttons */
+  
+  min-width: 130px;
+  height: 40px;
+  color:black;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid #ffd819;
+  background: #ffd819;
+}
+
+.buttons button:hover {
+  background:black ;
+  color: #ffd819 /* Darken button background on hover */
+}
+body > div {
+  height: 54px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

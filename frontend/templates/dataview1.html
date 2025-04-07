@@ -1,0 +1,370 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stAtlas | Datasets | view</title>
+    <!-- 正确的静态文件路径 -->
+    <link rel="stylesheet" href="{% static 'css/dataview1.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 预加载背景图片 -->
+    <!-- <link rel="preload" href="{% static 'images/pg6.jpg' %}" as="image"> -->
+    
+    <!-- 正确的 JavaScript 文件路径 -->
+    <script src="{% static 'js/dataview1.js' %}" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar">   
+            <a href="https://lab-li.ciim-hannover.de/">
+                <img src="{% static 'images/lab_li.png' %}" alt="Lab Logo" width="120" height="60">  
+            </a>
+    
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <!-- <li><a href="{% url 'mapping' %}">Mapping</a></li> -->
+                <li class="active"><a href="{% url 'datasets' %}">Datasets</a></li>
+                <!-- <li><a href="{% url 'search' %}">Search</a></li> -->
+                <li><a href="{% url 'help' %}">Help</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contacts' %}">Contact</a></li>
+            </ul>
+    
+             <a href="https://www.ciim-hannover.de/en/" target="_blank">
+                <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120" height="60" alt="CiiM">
+             </a>
+        </nav>
+    </header>
+    
+    <div>
+        <nav>
+          <ul id="list">
+            <li>
+              <a href="#Summary" class="active">Summary</a>
+            </li>
+            <li>
+              <a href="#Sample">Sample</a>
+            </li>
+            <li>
+              <a href="#Sections">Sections</a>
+            </li>
+            <li>
+              <a href="#View">View</a>
+            </li>
+            <li>
+              <a href="#Source">Source</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <main>
+          <h4 id="Summary">Dataset</h4>
+          <h2>TB-Lung-Visium-1</h2>
+  
+          <div>
+            <span>Normal Tissue</span>
+            <span>Human</span>
+          </div>
+  
+          <section class="card1">
+            <div>
+              <strong>Sample ID</strong>
+              <span>ACPMB1</span>
+            </div>
+  
+            <div>
+              <strong>PubID</strong>
+              <span>ACPMB001</span>
+            </div>
+  
+            <div>
+              <strong>Method</strong>
+              <span>Visium</span>
+            </div>
+          </section>
+  
+          <section class="card2">
+            <header>
+              <span id="Sample">Sample</span>
+  
+              <svg viewBox="64 64 896 896">
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                ></path>
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z"
+                ></path>
+              </svg>
+  
+              <div></div>
+            </header>
+  
+            <main>
+              <section>
+                <strong>Species</strong>
+                <span>Human</span>
+              </section>
+  
+              <section>
+                <strong>Tissue_Type</strong>
+                <span>Lung</span>
+              </section>
+  
+              <section>
+                <strong>Granuloma description</strong>
+                <span>Medium Granuloma + B-cell cluster</span>
+              </section>
+  
+              <section>
+                <strong>Age </strong>
+                <span>58</span>
+              </section>
+  
+              <section>
+                <strong>Sex</strong>
+                <span>F</span>
+              </section>
+  
+              <section>
+                <strong>bacteria</strong>
+                <span>M. xenopi</span>
+              </section>
+  
+              <section>
+                <strong>Note</strong>
+                <span
+                  >Formalin-fixed paraffin-embedded (FFPE) tissues</span
+                >
+              </section>
+            </main>
+          </section>
+  
+          <section class="card2">
+            <header>
+              <span id="Sections">Sections</span>
+  
+              <svg viewBox="64 64 896 896">
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                ></path>
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z"
+                ></path>
+              </svg>
+  
+              <div></div>
+            </header>
+  
+            <main>
+              <section>
+                <strong>Number of Sections</strong>
+                <span>1</span>
+              </section>
+  
+              <section>
+                <strong>Slide Number</strong>
+                <span
+                  >V53F21-116</span
+                >
+              </section>
+            </main>
+          </section>
+  
+          <section class="card2 view">
+            <header>
+              <span id="View">View</span>
+  
+              <svg viewBox="64 64 896 896">
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                ></path>
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z"
+                ></path>
+              </svg>
+  
+              <div></div>
+            </header>
+  
+            <section>
+              <div>
+                <span>Slide Number: </span>
+              </div>
+  
+              <select>
+                <option value="">V53F21-116</option>
+                <!-- <option value="">GSM5621972</option>
+                <option value="">GSM5621974</option>
+                <option value="">GSM5621978</option>
+                <option value="">GSM5621975</option>
+                <option value="">GSM5621973</option>
+                <option value="">GSM5621977</option> -->
+              </select>
+            </section>
+  
+            <main>
+              <header>
+                <button>
+                  <svg viewBox="0 0 24 24" fill="#fff" width="15">
+                    <path
+                      d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                    ></path>
+                  </svg>
+                </button>
+  
+                <span>2,082 spots</span>
+  
+                <div class="active">Embeddings</div>
+                <div>Distributions</div>
+  
+                <button>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+                    ></path>
+                  </svg>
+                </button>
+  
+                <button>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"
+                    ></path>
+                  </svg>
+                </button>
+              </header>
+  
+              <nav>
+                <p>Explore</p>
+  
+                <select>
+                  <option value="">Embeddings</option>
+                </select>
+  
+                <div>
+                  <span>Tissue_hires</span>
+  
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                    ></path>
+                  </svg>
+                </div>
+                <select>
+                  <option value="">Loading genes...</option>
+                </select>
+
+
+                <!-- <input type="text" id="gene-selector" list="gene-list" placeholder="Select or type gene" />
+                <datalist id="gene-list"></datalist> -->
+
+                <!-- 放在 nav 里面原先的 input/select 那个地方 -->
+                <div class="gene-input-wrapper">
+                  <input type="text" id="gene-selector" placeholder="Select or type gene" autocomplete="off" />
+                  <ul id="gene-suggestions" class="gene-suggestions hidden"></ul>
+                </div>                
+
+  
+                <div>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9.93 13.5h4.14L12 7.98 9.93 13.5zM20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-4.29 15.88-.9-2.38H9.17l-.89 2.37c-.14.38-.5.63-.91.63-.68 0-1.15-.69-.9-1.32l4.25-10.81c.22-.53.72-.87 1.28-.87s1.06.34 1.27.87l4.25 10.81c.25.63-.22 1.32-.9 1.32-.4 0-.76-.25-.91-.62z"
+                    ></path>
+                  </svg>
+  
+                  <span>leiden0.5</span>
+  
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                    ></path>
+                  </svg>
+                </div>
+  
+                <select>
+                  <option value="">Sets</option>
+                </select>
+  
+                <p>View</p>
+                <span>Opacity</span>
+                <input type="range" name="" id="" />
+                <span> Filtered Marker Opacity </span>
+                <input type="range" name="" id="" />
+  
+                <input type="text" placeholder="Marker Size" />
+                <input type="text" placeholder="Filtered Marker Size" />
+                <input type="text" placeholder="Gallery Chart Size" />
+  
+                <span>Color Scheme </span>
+  
+                <input type="color" value="#ADD93F" />
+              </nav>
+
+              <!-- 新增：图片容器 -->
+              <div class="main-image-container">
+                <!-- <img 
+                  src="{% static 'images/capture2.PNG' %}" 
+                  alt="Preview" 
+                /> -->
+                  <!-- <canvas id="visiumCanvas" width="600" height="600"></canvas> -->
+                  <!-- <img id="image-display" src="" alt="Gene plot will appear here" style="max-width: 100%; margin-top: 20px;"> -->
+                  <img id="image-display" src="{% static 'images/defaultspot_plot1.png' %}" style="max-width: 90%; margin-top: 20px; ">
+              </div>
+              <section></section>
+            </main>
+          </section>
+  
+          <section class="card2 source">
+            <header>
+              <span id="Source">Source</span>
+  
+              <svg viewBox="64 64 896 896">
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                ></path>
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z"
+                ></path>
+              </svg>
+  
+              <div></div>
+            </header>
+  
+            <main>
+              <div>
+                <strong>Title</strong>
+                <span
+                  >Spatial Transcriptomics of Mycobacterial Granuloma
+                  </span
+                >
+              </div>
+  
+              <div>
+                <strong>Journal</strong>
+                <span>Nature Genetics</span>
+              </div>
+  
+              <div>
+                <strong>PMID</strong>
+                <span>- -</span>
+              </div>
+  
+              <div>
+                <strong>URL</strong>
+                <span>https://doi.org</span>
+              </div>
+            </main>
+          </section>
+        </main>
+      </div>
+  
+      <footer>© 2025 All Rights Reserved | Yang Li lab of CiiM</footer>
+    </body>
+  
+    
+  </html>
+  

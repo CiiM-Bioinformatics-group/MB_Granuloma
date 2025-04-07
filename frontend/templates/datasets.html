@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stAtlas | Datasets</title>
+
+    <!-- 正确的静态文件路径 -->
+    <link rel="stylesheet" href="{% static 'css/datasets.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 预加载背景图片 -->
+    <link rel="preload" href="{% static 'images/pg6.jpg' %}" as="image">
+    
+    <!-- 正确的 JavaScript 文件路径 -->
+    <script src="{% static 'js/datasets.js' %}" defer></script>
+</head>
+
+<body>
+<header>
+    <nav class="navbar">   
+        <a href="https://lab-li.ciim-hannover.de/">
+            <img src="{% static 'images/lab_li.png' %}" alt="Lab Logo" width="120" height="60">  
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <!-- <li><a href="{% url 'mapping' %}">Mapping</a></li> -->
+            <li class="active"><a href="{% url 'datasets' %}">Datasets</a></li>
+            <!-- <li><a href="{% url 'search' %}">Search</a></li> -->
+            <li><a href="{% url 'help' %}">Help</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contacts' %}">Contact</a></li>
+        </ul>
+
+        <a href="https://www.ciim-hannover.de/en/" target="_blank">
+            <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120" height="60" alt="CiiM">
+        </a>
+    </nav>
+</header>
+
+<main>
+    <section id="datasets">
+        <h2>Spatial Transcriptomics Dataset Browser</h2>
+        <p>stRNAAtlas provides a manually curated compilation of spatial transcriptomics (ST) data spanning a wide variety of biological systems.
+            We collected 40 ST datasets comprising a lot sections across organs, developmental stages and pathological states from humans. 
+            All curated ST datasets were processed by a centralized workflow. We provide this interface to help users navigate through this catalog.
+            Select a ST dataset and explore the spatially resolved expression profiles of genes of interest.
+        </p>
+    </section>
+
+    <section >
+      <div class="content">
+        <h2>Human Archive</h2>
+        
+      <img src="{% static 'images/humenbody.png' %}" alt="Centered Image">
+      <div class="horizontal-images">
+          <img class="left-img" src="{% static 'images/lung.png' %}" alt="Left Aligned Image">
+          <img class="right-img" src="{% static 'images/linechart.png' %}" alt="Aligned Image">
+      
+      <div class="buttons">
+        <button id="Datasets-btn" data-url="{% url 'lungs' %}">Datasets</button>
+        <button id="Sections-btn" data-url="{% url 'lungs' %}">Sections</button>
+      </div>
+    </div>
+    </div>
+      
+    </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2025 All Rights Reserved | Yang Li lab of CiiM</p>
+</footer>
+
+</body>
+</html>

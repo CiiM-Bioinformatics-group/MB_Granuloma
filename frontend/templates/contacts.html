@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stAtlas | Contact</title>
+    
+    <!-- 正确的静态文件路径 -->
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 预加载背景图片 -->
+    <link rel="preload" href="{% static 'images/pg5.jpg' %}" as="image">
+    
+    <!-- 正确的 JavaScript 文件路径 -->
+    <script src="{% static 'js/contacts.js' %}" defer></script>
+</head>
+
+<body>
+<header>
+    <nav class="navbar">   
+        <a href="https://lab-li.ciim-hannover.de/">
+            <img src="{% static 'images/lab_li.png' %}" alt="Lab Logo" width="120" height="60">  
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>       
+            <!-- <li><a href="{% url 'mapping' %}">Mapping</a></li>    -->
+            <li><a href="{% url 'datasets' %}">Datasets</a></li>
+            <!-- <li><a href="{% url 'search' %}">Search</a></li> -->
+            <li><a href="{% url 'help' %}">Help</a></li>         
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li class="active"><a href="{% url 'contacts' %}">Contact</a></li>
+        </ul>
+
+        <a href="https://www.ciim-hannover.de/en/" target="_blank">
+            <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120" height="60" alt="CiiM">
+        </a>
+    </nav>
+</header>
+
+<main>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Department: Computational Biology for Individualised Medicine (BiiM)</p>
+        <p>Research Institution: Centre for Individualised Infection Medicine (CiiM)</p>
+        <p>Collaboration by: Helmholtz Centre for Infection Research (HZI) & Hannover Medical School (MHH)</p>
+    </section>
+
+    <section id="Address">
+        <h2>Address</h2>
+        <p>
+            <a target="_blank" href="https://maps.app.goo.gl/PFR5BiiceBc3AmTp6">
+                Twincore<br>
+                Feodor-Lynen-Str. 7 <br>
+                30625 Hannover <br>
+                Germany <br>
+            </a>
+        </p>
+    </section>
+
+    <section id="Links">
+        <h2>Links</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="https://www.ciim-hannover.de/en/research/research-groups/research-group/computational-biology-for-individualised-medicine" target="_blank">Centre for Individualised Infection Medicine</a></li>
+            <li class="list-group-item"><a href="https://www.helmholtz-hzi.de/en/research/research-groups/details/computational-biology-for-individualised-medicine" target="_blank">Helmholtz Centre for Infection Research</a></li>
+            <li class="list-group-item"><a href="https://www.twincore.de/forschungsgruppen/zentrum-fuer-individualisierte-infektionsmedizin-ciim/computational-biology-for-individualised-medicine/" target="_blank">Twincore</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© 2025 All Rights Reserved | Yang Li lab of CiiM</p>
+  </footer>  
+</body>
+</html>
