@@ -1,3 +1,6 @@
+// 自动识别 SCRIPT_NAME（是否包含 /mb-granuloma）
+const SCRIPT_NAME = window.location.pathname.includes('/mb-granuloma') ? '/mb-granuloma' : '';
+
 // 等待文档加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
   var knowMoreBtn = document.getElementById('know-more-btn');
@@ -74,7 +77,6 @@ function getCookie(name) {
 document.getElementById('sendButton').addEventListener('click', function() {
   // 获取表单元素
   const form = document.getElementById('contactForm');
-  // 手动触发表单提交
   form.dispatchEvent(new Event('submit', { 'bubbles': true, 'cancelable': true }));
 });
 
@@ -86,23 +88,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   const companyName = document.getElementById('companyName').value;
   const fullName = document.getElementById('fullName').value;
   const emailAddress = document.getElementById('emailAddress').value;
-
-  // 使用 fetch API 发送 POST 请求到后端 API
-  // fetch('http://127.0.0.1:8000/api/contact/', {  // 替换为你的后端 API URL
-  //     method: 'POST',
-  //     headers: {
-  //         'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({
-  //         company_name: companyName,
-  //         full_name: fullName,
-  //         email_address: emailAddress,
-  //     }),
-  // })
-
   const csrftoken = getCookie('csrftoken');
 
-  fetch('http://127.0.0.1:8000/api/contact/', {
+  fetch(`${SCRIPT_NAME}/api/contact/`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
