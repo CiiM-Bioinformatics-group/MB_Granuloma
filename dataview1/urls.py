@@ -1,6 +1,6 @@
 
 
-from django.urls import path
+from django.urls import path # type: ignore
 from .views import dataview1_page, get_gene_list, plot_gene_image
 
 urlpatterns = [
