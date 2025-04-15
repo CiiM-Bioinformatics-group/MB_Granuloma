@@ -66,7 +66,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 import os
 
-STATIC_URL = '/static/'
+FORCE_SCRIPT_NAME = '/mb-granuloma'
+USE_X_FORWARDED_HOST = True
+
+STATIC_URL = '/mb-granuloma/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/static'),  # 指定静态文件路径
@@ -76,6 +79,32 @@ STATICFILES_DIRS = [
  # Where collectstatic will collect files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 
+
+# NGINX settings:
+	# # Django app under /mb-granuloma
+	# location /mb-granuloma/ {
+	# 		proxy_pass http://127.0.0.1:8001;
+
+	# 		proxy_set_header Host $host;
+	# 		proxy_set_header X-Real-IP $remote_addr;
+	# 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	# 		proxy_set_header X-Forwarded-Proto $scheme;
+	# 		proxy_set_header SCRIPT_NAME /mb-granuloma;
+
+	# 		proxy_redirect off;
+	# }
+
+	# location /mb-granuloma/static/ {
+	# 	alias /home/nvu22/opt/biimtools/mb_granuloma/frontend/static/;
+	# }
+
+
+	# # deny access to Apache .htaccess on Nginx with PHP, 
+	# # if Apache and Nginx document roots concur
+	# location ~* \.(htaccess|htpasswd|bak|config|sql|swp|ini|log)$ {
+	# 	deny all;
+	# 	return 404;
+	# }
 
 
 TEMPLATES = [

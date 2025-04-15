@@ -1,4 +1,6 @@
 
+const SCRIPT_NAME = '/mb-granuloma';
+
       const links = document.querySelectorAll("#list a[href^='#']");
   
       const titles = [];
@@ -159,7 +161,7 @@
 
     // 1️ 载入 gene 列表（放入 JS 变量中）
     function loadGeneList() {
-        fetch("/dataview1/api/gene_list/")
+      fetch(`${SCRIPT_NAME}/dataview1/api/gene_list/`)
             .then(response => response.json())
             .then(data => {
                 if (data.genes) {
@@ -214,7 +216,7 @@
 
     // 4️ 核心函数：发送请求并更新图片
     function triggerGenePlot(gene) {
-        fetch("/dataview1/api/plot_gene_image/", {
+      fetch(`${SCRIPT_NAME}/dataview1/api/gene_list/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

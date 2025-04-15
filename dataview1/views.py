@@ -10,23 +10,10 @@ import matplotlib
 matplotlib.use("Agg")  # use backend without GUI
 import matplotlib.pyplot as plt
 
-# read HDF5 (AnnData) from usb
-# adata = sc.read_h5ad(f"/Volumes/POMMESFRITE/MTBdata/Splited_data_for_webtool/ACPMB001.h5ad")
-
-# from django.conf import settings
-
-# # read anndata
-# static_dir = settings.STATICFILES_DIRS[0]
-# file_path = os.path.join(static_dir, "MTBdata/Splited_data_for_webtool/ACPMB001.h5ad")
-# adata = sc.read_h5ad(file_path)
-
-# read anndata
 from django.conf import settings
-file_path = os.path.join(settings.MY_ANNDATA_DIR, 'ACPMB001.h5ad')
-adata = sc.read_h5ad(file_path)
 
+from .preload import adata, sampleID
 
-sampleID = "ACPMB1"
 
 @csrf_exempt
 def get_gene_list(request):
