@@ -42,14 +42,20 @@
 
 <main>
     <section id="datasets">
-        <h2>Spatial Transcriptomics Dataset Browser</h2>
-        <p>stRNAAtlas provides a manually curated compilation of spatial transcriptomics (ST) data spanning a wide variety of biological systems.
-            We collected 40 ST datasets comprising a lot sections across organs, developmental stages and pathological states from humans. 
-            All curated ST datasets were processed by a centralized workflow. We provide this interface to help users navigate through this catalog.
-            Select a ST dataset and explore the spatially resolved expression profiles of genes of interest.
+        <h2>Overview of the Study Workflow</h2>
+        <img src="{% static 'images/fig1_1.png' %}" alt="Granuloma Image" class="dataset-img">
+
+        <p> <strong> Schematic overview of the study workflow.</strong>  Biobanked lung tissue samples were collected from a 
+            discovery cohort (n=33) and a validation cohort (n=6). The samples were processed using the Visium 
+            probe-based spatial transcriptomics (10x genomics). After H&E staining and cDNA library preparation, 
+            sequencing was performed to map spatial gene expression in granulomas. Spatial niches were 
+            identified using clustering and cell-type deconvolution methods, which were improved by integration 
+            of the Lung v2 dataset, leading to insights into the functional roles of each niche and comparison with 
+            sarcoid granulomas. Main findings from spatial transcriptomics were validated through 
+            immunohistofluorescence protein stainings.
         </p>
     </section>
-
+<!-- 
     <section >
       <div class="content">
         <h2>Human Archive</h2>
@@ -66,8 +72,31 @@
     </div>
     </div>
       
+    </section> -->
+    <section id="analyse">
+        <h2>Spatial Transcriptomic Analysis of MB Granulomas</h2>
+        <img src="{% static 'images/fig1_2.png' %}" alt="analyse Image" class="analyse-img">
+
+        <p class="para">Fig.1 <strong>Spatial niche clustering and annotation based on 
+                        integrated data from 34 granuloma samples.</strong> Distinct clusters representing necrotic, inner, middle, and 
+                        outer niche, as well as other cellular regions, are visualized.</p>
+        <p class="para">Fig.2 <strong>Spatial annotation of niches is overlaid 
+                        on histology images.</strong> Validating correspondence with H&E staining and deconvoluted cell type 
+                        distribution for each sample.</p>
+
     </section>
 
+    <section id="summary">
+        <h2>Summary of the Main Findings in this Study</h2>
+        <img src="{% static 'images/fig7.png' %}" alt="summary Image" class="summary-img">
+        <p> <strong>Granulomas are structured immune environments central to Mycobacterium infections. </strong>  
+            Using spatial transcriptomics on 39 patient samples, we identified five distinct niches
+             within lymphoid and pulmonary granulomas. MTB granulomas show strong JAK-STAT and IFN-lambda signaling, 
+             while NTM granulomas exhibit elevated hypoxia. The findings reveal spatially organized immune responses 
+             and distinct disease-specific signatures.
+        </p>
+
+    </section>
 </main>
 
 <footer class="footer">

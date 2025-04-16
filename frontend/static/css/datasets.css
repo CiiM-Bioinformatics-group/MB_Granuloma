@@ -73,7 +73,8 @@
 
 body {
   height: 100vh;
-  background-image: url("../images/pg6.jpg");
+  /* background-image: url("../images/pg6.jpg"); */
+  background-color: rgba(0, 0, 0, 0.866);
   border-color: #666666;
   background-position: center;
   background-repeat: no-repeat;
@@ -134,9 +135,45 @@ main {
 }
 
 section {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   text-align: center; /* 将段落和标题都居中对齐 */
-  padding: 20px; /* Optional: Add some padding around the image */
+  padding: 10px; /* Optional: Add some padding around the image */
+}
+
+#datasets img.dataset-img {
+  display: block;
+  margin: 25px auto; /* 居中显示 */
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+#analyse img.analyse-img {
+  display: block;
+  margin: 25px auto; /* 居中显示 */
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#analyse p {
+  text-align: left;
+}
+
+.para {
+  margin-bottom: 10px; /* 控制“段落间距” */
+}
+
+#summary img.summary-img {
+  display: block;
+  margin: 25px auto; /* 居中显示 */
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#summary p {
+  text-align: left;
 }
 
 section h2 {
@@ -144,7 +181,7 @@ section h2 {
   border-bottom: 1px solid #808080;
   padding-bottom: 10px; /* 可选：增加一点底部间距 */
   font-size: 2rem;
-  margin-bottom: 36px;
+  margin-bottom: 10px;
 }
 
 section p {
@@ -160,11 +197,11 @@ section:first-of-type p {
   text-align: left;
 }
 
-.content {
+/* .content {
   text-align: center;
-  color: white; /* Set the text color to white to contrast with the black background */
+  color: white; 
   
-}
+} */
 
 img {
   margin-top: 25px;
@@ -240,3 +277,4 @@ body > div {
   bottom: 0;
   width: 100%;
 }
+
