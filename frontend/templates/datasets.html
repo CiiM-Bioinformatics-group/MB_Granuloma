@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>stAtlas | Datasets</title>
+    <title>mbAtlas | GranulomaLandscape</title>
 
     <!-- 正确的静态文件路径 -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/datasets.css' %}" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
@@ -15,6 +16,11 @@
     
     <!-- 正确的 JavaScript 文件路径 -->
     <script src="{% static 'js/datasets.js' %}" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons(); // 加载所有 data-lucide 的图标
+    </script>
+
 </head>
 
 <body>
@@ -98,6 +104,27 @@
 
     </section>
 </main>
+
+<div class="floating-labels">
+   
+    <a class="label-box" href="{% url 'lungs' %}" data-id="lymph-node">
+      <i class="icon" data-lucide="brain"></i>
+      Lymph node granuloma
+    </a>
+    <a class="label-box" href="{% url 'lungs' %}" data-id="pulmonary">
+      <i class="icon" data-lucide="fingerprint"></i>
+      Pulmonary granuloma
+    </a>
+    <a class="label-box" href="{% url 'lungs' %}" data-id="mtb">
+      <i class="icon" data-lucide="dna"></i>
+      MTB granuloma
+    </a>
+    <a class="label-box" href="{% url 'lungs' %}" data-id="ntm">
+      <i class="icon" data-lucide="microscope"></i>
+      NTM granuloma
+    </a>
+  </div>
+  
 
 <footer class="footer">
   <p>© 2025 All Rights Reserved | AG-Li of CiiM</p>

@@ -30,6 +30,7 @@ urlpatterns = [
     path('about/', TemplateView.as_view(template_name="about.html"), name="about"),
     path('contacts/', TemplateView.as_view(template_name="contacts.html"), name="contacts"),
     path('lungs/', TemplateView.as_view(template_name="lungs.html"), name="lungs"),
+    path('sample/', TemplateView.as_view(template_name="sample.html"), name="sample"),
     path('dataview1/', TemplateView.as_view(template_name="dataview1.html"), name="dataview1"),
     path('dataview1/api/', include('dataview1.urls')),  # 让 Django 识别 API 路由
 ]
