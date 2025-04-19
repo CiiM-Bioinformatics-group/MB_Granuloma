@@ -294,9 +294,9 @@ body > div {
     align-items: center;
     gap: 10px;
     font-size: 0.95rem;
+    
   }
   
-
 
 .label-box:hover {
   background-color: black;

@@ -198,7 +198,7 @@
   
   .summary-img {
     display: block;
-    width: 500px; /* 或者 400px 看你喜欢多大 */
+    width: 520px; /* 或者 400px 看你喜欢多大 */
     height: auto;
     margin: 0;
   }
@@ -228,6 +228,11 @@
     align-items: center;
     gap: 10px;
     min-width: 240px;
+  }
+  
+  .label-box:hover {
+    background-color: black;
+    color: #ffd819;
   }
   
   .label-box .icon {

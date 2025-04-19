@@ -46,7 +46,7 @@
 
 <main>
     <section id="summary">
-      <h2>Datasets Browser for 39 samples</h2>
+      <h2>Datasets Browser for 33 samples</h2>
   
       <div class="summary-horizontal">
         <!-- 图片部分（靠左） -->
@@ -58,15 +58,26 @@
         <div class="label-stack">
           <!-- Lymph node -->
           <div class="label-group">
-            <a class="label-box" href="{% url 'lungs' %}">
+            <a class="label-box" href="{% url 'lymph' %}">
               <i class="icon" data-lucide="brain"></i> Lymph node granuloma
             </a>
             <div class="branch-box right">
-              <div class="branch">Sample number: 12</div>
-              <div class="branch">Data resource: abc</div>
+              <div class="branch">Sample number: 6</div>
+              <div class="branch">Data resource: Aachen, MHH, Yale</div>
             </div>
           </div>
-      
+          
+          <!-- Pulmonary -->
+          <div class="label-group">
+            <a class="label-box" href="{% url 'lungs' %}">
+              <i class="icon" data-lucide="fingerprint"></i> Pulmonary granuloma
+            </a>
+            <div class="branch-box right">
+              <div class="branch">Sample number: 27</div>
+              <div class="branch">Data resource: MHH, Yale</div>
+            </div>
+          </div>
+          
           <!-- MTB -->
           <div class="label-group">
             <a class="label-box" href="{% url 'lungs' %}">
@@ -78,16 +89,7 @@
             </div>
           </div>
       
-          <!-- Pulmonary -->
-          <div class="label-group">
-            <a class="label-box" href="{% url 'lungs' %}">
-              <i class="icon" data-lucide="fingerprint"></i> Pulmonary granuloma
-            </a>
-            <div class="branch-box right">
-              <div class="branch">Sample number: 10</div>
-              <div class="branch">Data resource: xyz</div>
-            </div>
-          </div>
+          
       
           <!-- NTM -->
           <div class="label-group">
