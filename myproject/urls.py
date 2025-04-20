@@ -48,14 +48,14 @@ urlpatterns = [
 
     #add sample pages
     path('dataview2/', dataview2_page, name='dataview2'),
-    path('dataview3/', dataview2_page, name='dataview3'),
-    path('dataview4/', dataview2_page, name='dataview4'),
-    path('dataview5/', dataview2_page, name='dataview5'),
-    path('dataview6/', dataview2_page, name='dataview6'),
-    path('dataview7/', dataview2_page, name='dataview7'),
-    path('dataview8/', dataview2_page, name='dataview8'),
-    path('dataview9/', dataview2_page, name='dataview9'),
-    path('dataview10/', dataview2_page, name='dataview10'),
+    path('dataview3/', dataview3_page, name='dataview3'),
+    path('dataview4/', dataview4_page, name='dataview4'),
+    path('dataview5/', dataview5_page, name='dataview5'),
+    path('dataview6/', dataview6_page, name='dataview6'),
+    path('dataview7/', dataview7_page, name='dataview7'),
+    path('dataview8/', dataview8_page, name='dataview8'),
+    path('dataview9/', dataview9_page, name='dataview9'),
+    path('dataview10/', dataview10_page, name='dataview10'),
 
     #add more apps.
     path("dataview2/api/", include("dataview2.urls")),
