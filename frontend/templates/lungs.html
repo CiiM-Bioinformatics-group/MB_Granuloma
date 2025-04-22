@@ -24,10 +24,8 @@
           <ul class="nav-links">
             
             <li><a href="{% url 'home' %}">Home</a></li>
-            <!-- <li><a href="{% url 'mapping' %}">Mapping</a></li> -->
-            <li class="active"><a href="{% url 'datasets' %}">Datasets</a></li>
-            <!-- <li><a href="{% url 'search' %}">Search</a></li> -->
-            <li><a href="{% url 'help' %}">Help</a></li>
+            <li><a href="{% url 'datasets' %}">Overview</a></li>
+            <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'contacts' %}">Contact</a></li>
           </ul>
@@ -65,7 +63,7 @@
             <p>Sex: F<br />
                Age: 64<br />
             </p>
-            <a href="{% url 'dataview2' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'ACPMB002' %}" class="know-more-btn">Know More</a>
         </div>
 
         <div class="card">
@@ -74,7 +72,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 34<br />
-            <a href="{% url 'dataview3' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'ACPMB003' %}" class="know-more-btn">Know More</a>
         </div>
 
         <div class="card">
@@ -83,7 +81,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 69<br />
-            <a href="{% url 'dataview4' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'ACPMB004' %}" class="know-more-btn">Know More</a>
         </div>
 
         <div class="card">
@@ -92,7 +90,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 76<br />
-               <a href="{% url 'dataview5' %}" class="know-more-btn">Know More</a>
+               <a href="{% url 'ACPMB005' %}" class="know-more-btn">Know More</a>
         </div>
         <div class="card">
             <div class="photo"><img src="{% static 'generated/006default.png' %}" alt=""></div>
@@ -100,7 +98,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 21<br />
-            <a href="{% url 'dataview6' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'ACPMB006' %}" class="know-more-btn">Know More</a>
 
         </div>
         <div class="card">
@@ -109,7 +107,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 47<br />
-            <a href="{% url 'dataview7' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'ACPMB007' %}" class="know-more-btn">Know More</a>
         </div>
 
         <div class="card">
@@ -118,7 +116,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 39<br />
-            <a href="{% url 'dataview8' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'ACPMB008' %}" class="know-more-btn">Know More</a>
         </div>
         <div class="card">
             <div class="photo"><img src="{% static 'generated/009default.png' %}" alt=""></div>
@@ -126,7 +124,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 58<br />
-            <a href="{% url 'dataview9' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'ACPMB009' %}" class="know-more-btn">Know More</a>
         </div>
 
         <div class="card">
@@ -135,7 +133,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 25<br />
-            <a href="{% url 'dataview10' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'ACPMB010' %}" class="know-more-btn">Know More</a>
         </div>
 
         <div class="card">
@@ -144,7 +142,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 50<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'ACPMB011' %}">Know More</a>
         </div>
         <div class="card">
             <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
@@ -152,7 +150,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 66<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'ACPMB013' %}">Know More</a>
         </div>
         <div class="card">
             <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
@@ -160,7 +158,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 76<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'ACPMB014' %}">Know More</a>
         </div>
         <div class="card">
             <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
@@ -168,7 +166,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 74<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'ACPMB016' %}">Know More</a>
         </div>
         <div class="card">
             <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
@@ -176,7 +174,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 49<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG005' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -185,7 +183,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 59<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG013' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -194,7 +192,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 52<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG014' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -203,7 +201,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 71<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG020_1' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -212,7 +210,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 71<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG020_2' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -221,7 +219,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 71<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG020_3' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -230,7 +228,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 60<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG024' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -239,7 +237,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 81<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB001' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -248,7 +246,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 35<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB005' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -257,7 +255,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 59<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB008' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -266,7 +264,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 63<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB010' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -275,7 +273,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
                Age: 79<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB012' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -284,7 +282,7 @@
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
                Age: 71<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB015' %}">Know More</a>
         </div>
         <!-- ...复制上面的卡片，直到总数达到40个... -->
     </div>

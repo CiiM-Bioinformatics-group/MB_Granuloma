@@ -24,9 +24,8 @@
           <ul class="nav-links">
             
             <li><a href="{% url 'home' %}">Home</a></li>
-            <!-- <li><a href="{% url 'mapping' %}">Mapping</a></li> -->
-            <li class="active"><a href="{% url 'datasets' %}">Datasets</a></li>
-            <!-- <li><a href="{% url 'search' %}">Search</a></li> -->
+            <li><a href="{% url 'datasets' %}">Overview</a></li>
+            <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
             <li><a href="{% url 'help' %}">Help</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'contacts' %}">Contact</a></li>
@@ -55,7 +54,7 @@
                Age: 13<br />
                <!-- Bacteria: M. xenopi -->
             </p>
-            <a href="{% url 'dataview1' %}" class="know-more-btn">Know More</a>
+            <a href="{% url 'NSG017' %}" class="know-more-btn">Know More</a>
         </div>
 
         <div class="card">
@@ -65,7 +64,7 @@
             <p>Sex: F<br />
                Age: 71<br />
             </p>
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG019' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -74,7 +73,7 @@
             <h2>Human, Lymphnode </h2>
             <p>Sex: F<br />
                Age: 68<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'NSG023' %}">Know More</a>
         </div>
 
         <div class="card">
@@ -83,15 +82,15 @@
             <h2>Human, Lymphnode </h2>
             <p>Sex: F<br />
                Age: 64<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB006' %}">Know More</a>
         </div>
         <div class="card">
             <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
-            <h1>AYTB009</h1>
+            <h1>YTB009</h1>
             <h2>Human, Lymphnode </h2>
             <p>Sex: F<br />
                Age: 64<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB009' %}">Know More</a>
         </div>
         <div class="card">
             <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
@@ -99,7 +98,7 @@
             <h2>Human, Lymphnode </h2>
             <p>Sex: M<br />
                Age: 1<br />
-            <a href="#">Know More</a>
+            <a href="{% url 'YTB019' %}">Know More</a>
         </div>
 
     </div>
