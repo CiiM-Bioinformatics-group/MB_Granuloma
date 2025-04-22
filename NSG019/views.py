@@ -17,10 +17,10 @@ def nsg019_page(request):
         'sex': 'F',
         'bacteria': 'M. tuberculosis',
         'slide_number': 'V53F21-047',
-        'sample_id': '-',
+        'sample_id': 'NSG019',
         'pubid': 'NSG019',
         'method': 'Visium',
-        'default_img': f'/static/generated/{sampleID}/defaultspot_plot.png',
+        'default_img': f'/static/images/spots/{sampleID}.jpeg',
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 

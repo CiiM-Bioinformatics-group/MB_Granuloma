@@ -18,9 +18,9 @@ def acpmb004_page(request):
         'bacteria': 'M. avium',
         'slide_number': 'V53F21-067',
         'sample_id': sampleID,
-        'pubid': 'ACPMB004',
+        # 'pubid': 'ACPMB004',
         'method': 'Visium',
-        'default_img': f'/static/generated/{sampleID}/defaultspot_plot.png',
+        'default_img': f'/static/images/spots/{sampleID}.jpeg',
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 

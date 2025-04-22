@@ -141,7 +141,7 @@ body {
 main {
     width: 65%;
     margin: 100px auto; /* 居中对齐，并增加上下边距 */
-    padding:  20px 40px;
+    padding:  20px 20px 40px;
   }
 
 .container {
@@ -163,7 +163,7 @@ main {
 }
 
 .section-title h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #fff; /* 或你页面背景下能看的颜色 */
   border-bottom: 1px solid #ccc;

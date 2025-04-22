@@ -17,10 +17,10 @@ def nsg024_page(request):
         'sex': 'F',
         'bacteria': 'M. chimaera',
         'slide_number': 'V53F21-044',
-        'sample_id': '-',
+        'sample_id': 'NSG024',
         'pubid': 'NSG024',
         'method': 'Visium',
-        'default_img': f'/static/generated/{sampleID}/defaultspot_plot.png',
+        'default_img': f'/static/images/spots/{sampleID}.jpeg',
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 

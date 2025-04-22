@@ -61,8 +61,6 @@
 }
 
 
-
-
 .bg1 {
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
@@ -150,17 +148,20 @@ section h2 {
 
 section p {
   line-height: 1.6;
-}
-
-section:first-of-type h2 {
-  text-align: center;
-}
-
-section:first-of-type p {
   text-align: left;
 }
 
+#license p {
+  text-align: center;
+}
 
+/* section:first-of-type h2 {
+  text-align: center;
+}*/
+
+/* section:second-of-type p {
+  text-align: center;
+}  */
 
 
 body > div {

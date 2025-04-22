@@ -4,26 +4,38 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mbAtlas | Datasets | view</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <title>mbAtlas | Datasets | Samples</title>
     <link rel="stylesheet" href="{% static 'css/dataview1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
     <script src="{% static 'js/dataview1.js' %}" defer></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <a href="https://lab-li.ciim-hannover.de/">
-                <img src="{% static 'images/lab_li.png' %}" alt="Lab Logo" width="120" height="60" />
-            </a>
-            <ul class="nav-links">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'datasets' %}">Overview</a></li>
-                <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'contacts' %}">Contact</a></li>
-            </ul>
-            <a href="https://www.ciim-hannover.de/en/" target="_blank">
-                <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120" height="60" alt="CiiM" />
-            </a>
+            <a href="https://www.helmholtz-hzi.de">
+                <img src="https://www.helmholtz-hzi.de/_assets/ae8a1fe32f30b295243325c1db1b8058/Images/Assets/logo-hzi-white.svg" alt="" width="220" height="60" >  
+              </a>
+      
+              <a href="https://lab-li.ciim-hannover.de/">
+                <img src="{% static 'images/lab_li.png' %}" alt="" width="100" height="50" >  
+              </a>
+      
+              <ul class="nav-links">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'datasets' %}">Overview</a></li>
+                  <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'contacts' %}">Contact</a></li>
+              </ul>
+      
+              <a href="https://www.ciim-hannover.de/en/" target="_blank">
+                <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
+              </a>
+              <a href="https://www.mhh.de">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Medizinische_Hochschule_Hannover_logo.svg/1600px-Medizinische_Hochschule_Hannover_logo.svg.png" alt="" width="220" height="60" >  
+              </a>
+      
         </nav>
     </header>
 
@@ -48,7 +60,7 @@
 
             <section class="card1">
                 <div><strong>Sample ID</strong><span>{{ dataset.sample_id }}</span></div>
-                <div><strong>PubID</strong><span>{{ dataset.pubid }}</span></div>
+                <!-- <div><strong>PubID</strong><span>{{ dataset.pubid }}</span></div> -->
                 <div><strong>Method</strong><span>{{ dataset.method }}</span></div>
             </section>
 

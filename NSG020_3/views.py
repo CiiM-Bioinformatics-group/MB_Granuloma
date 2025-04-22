@@ -17,10 +17,10 @@ def nsg020_3_page(request):
         'sex': 'F',
         'bacteria': 'M. avium',
         'slide_number': 'V53F21-115',
-        'sample_id': '-',
+        'sample_id': 'NSG020_3',
         'pubid': 'NSG020_3',
         'method': 'Visium',
-        'default_img': f'/static/generated/{sampleID}/defaultspot_plot.png',
+        'default_img': f'/static/images/spots/{sampleID}.jpeg',
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 

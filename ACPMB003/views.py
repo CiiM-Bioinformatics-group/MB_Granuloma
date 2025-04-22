@@ -18,9 +18,9 @@ def acpmb003_page(request):
         'bacteria': 'M. tuberculosis complex',
         'slide_number': 'V53F21-067',
         'sample_id': sampleID,
-        'pubid': 'ACPMB003',
+        # 'pubid': 'ACPMB003',
         'method': 'Visium',
-        'default_img': f'/static/generated/{sampleID}/defaultspot_plot.png',
+        'default_img': f'/static/images/spots/{sampleID}.jpeg',
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 

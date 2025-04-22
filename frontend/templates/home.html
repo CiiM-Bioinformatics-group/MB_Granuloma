@@ -8,6 +8,8 @@
     <title>mbAtlas | Home</title>
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- 引入 JavaScript 文件 -->
     <script src="{% static 'js/home.js' %}" defer></script>
@@ -17,11 +19,16 @@
   <body>
     <header>
     <nav class="navbar">   
-      <a href="https://lab-li.ciim-hannover.de/">
-        <img src="{% static 'images/lab_li.png' %}" alt="" width="120" height="60" >  
+      
+      
+      <a href="https://www.helmholtz-hzi.de">
+        <img src="https://www.helmholtz-hzi.de/_assets/ae8a1fe32f30b295243325c1db1b8058/Images/Assets/logo-hzi-white.svg" alt="" width="220" height="60" >  
       </a>
-    
-    
+
+      <a href="https://lab-li.ciim-hannover.de/">
+        <img src="{% static 'images/lab_li.png' %}" alt="" width="100" height="50" >  
+      </a>
+
       <ul class="nav-links">
         <li class="active"><a href="{% url 'home' %}">Home</a></li>
         <!-- <li><a href="{% url 'mapping' %}">Mapping</a></li> -->
@@ -35,6 +42,10 @@
       
         <a href="https://www.ciim-hannover.de/en/" target="_blank">
           <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
+        </a>
+
+        <a href="https://www.mhh.de">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Medizinische_Hochschule_Hannover_logo.svg/1600px-Medizinische_Hochschule_Hannover_logo.svg.png" alt="" width="220" height="60" >  
         </a>
     </nav>
 
@@ -113,7 +124,7 @@
             30625 Hannover<br />
           </span>
 
-          <p>Telefon: +49 511 22002 7226</p>
+          <p>Telefon: +49 511 220027200</p>
         </div>
 
         <form id="contactForm">

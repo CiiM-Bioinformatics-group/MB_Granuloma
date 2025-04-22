@@ -20,7 +20,7 @@ def acpmb014_page(request):
         'sample_id': sampleID,
         'pubid': 'ACPMB014',
         'method': 'Visium',
-        'default_img': f'/static/generated/{sampleID}/defaultspot_plot.png',
+        'default_img': f'/static/images/spots/{sampleID}.jpeg',
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 

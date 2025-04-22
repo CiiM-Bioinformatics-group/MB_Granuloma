@@ -7,6 +7,8 @@
     <title>mbAtlas | Datasets| Lung</title>
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/lungs.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="preload" href="{% static 'images/pg9.jpg' %}" as="image">
     <script src="{% static 'js/lungs.js' %}" defer></script>
@@ -16,24 +18,29 @@
 <body>
     <header>
         <nav class="navbar">   
-          <a href="https://lab-li.ciim-hannover.de/">
-            <img src="{% static 'images/lab_li.png' %}" alt="" width="120" height="60" >  
-          </a>
-        
-        
-          <ul class="nav-links">
-            
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'datasets' %}">Overview</a></li>
-            <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'contacts' %}">Contact</a></li>
-          </ul>
-         
-          
-            <a href="https://www.ciim-hannover.de/en/" target="_blank">
-              <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
-            </a>
+            <a href="https://www.helmholtz-hzi.de">
+                <img src="https://www.helmholtz-hzi.de/_assets/ae8a1fe32f30b295243325c1db1b8058/Images/Assets/logo-hzi-white.svg" alt="" width="220" height="60" >  
+              </a>
+      
+              <a href="https://lab-li.ciim-hannover.de/">
+                <img src="{% static 'images/lab_li.png' %}" alt="" width="100" height="50" >  
+              </a>
+      
+              <ul class="nav-links">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'datasets' %}">Overview</a></li>
+                  <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'contacts' %}">Contact</a></li>
+              </ul>
+      
+              <a href="https://www.ciim-hannover.de/en/" target="_blank">
+                <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
+              </a>
+              <a href="https://www.mhh.de">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Medizinische_Hochschule_Hannover_logo.svg/1600px-Medizinische_Hochschule_Hannover_logo.svg.png" alt="" width="220" height="60" >  
+              </a>
+      
         </nav>
     
         </header>
@@ -46,7 +53,7 @@
 
      <div class="container">
         <div class="card">
-            <div class="photo"><img src="{% static 'images/cover1.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB1.jpeg' %}" alt=""></div>
             <h1>ACPMB1</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -57,7 +64,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/002default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB2.jpeg' %}" alt=""></div>
             <h1>ACPMB2</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -67,7 +74,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/003default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB3.jpeg' %}" alt=""></div>
             <h1>ACPMB3</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -76,7 +83,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/004default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB4.jpeg' %}" alt=""></div>
             <h1>ACPMB4</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -85,7 +92,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/005default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB5.jpeg' %}" alt=""></div>
             <h1>ACPMB5</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -93,7 +100,7 @@
                <a href="{% url 'ACPMB005' %}" class="know-more-btn">Know More</a>
         </div>
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/006default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB6.jpeg' %}" alt=""></div>
             <h1>ACPMB6</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -102,7 +109,7 @@
 
         </div>
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/007default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB7.jpeg' %}" alt=""></div>
             <h1>ACPMB7</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -111,7 +118,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/008default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB8.jpeg' %}" alt=""></div>
             <h1>ACPMB8</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -119,7 +126,7 @@
             <a href="{% url 'ACPMB008' %}" class="know-more-btn">Know More</a>
         </div>
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/009default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB9.jpeg' %}" alt=""></div>
             <h1>ACPMB9</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -128,7 +135,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'generated/010default.png' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB10.jpeg' %}" alt=""></div>
             <h1>ACPMB10</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -137,7 +144,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB11.jpeg' %}" alt=""></div>
             <h1>ACPMB11</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -145,7 +152,7 @@
             <a href="{% url 'ACPMB011' %}">Know More</a>
         </div>
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB13.jpeg' %}" alt=""></div>
             <h1>ACPMB13</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -153,7 +160,7 @@
             <a href="{% url 'ACPMB013' %}">Know More</a>
         </div>
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB14.jpeg' %}" alt=""></div>
             <h1>ACPMB14</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -161,7 +168,7 @@
             <a href="{% url 'ACPMB014' %}">Know More</a>
         </div>
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/ACPMB16.jpeg' %}" alt=""></div>
             <h1>ACPMB16</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -169,7 +176,7 @@
             <a href="{% url 'ACPMB016' %}">Know More</a>
         </div>
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/H1219915.jpeg' %}" alt=""></div>
             <h1>NSG005</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -178,7 +185,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/H1116034.jpeg' %}" alt=""></div>
             <h1>NSG013</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -187,7 +194,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/H222587.jpeg' %}" alt=""></div>
             <h1>NSG014</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -196,7 +203,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/H23_25536.jpeg' %}" alt=""></div>
             <h1>NSG020_1</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -205,7 +212,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/H2315532.jpeg' %}" alt=""></div>
             <h1>NSG020_2</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -214,7 +221,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/2315332.jpeg' %}" alt=""></div>
             <h1>NSG020_3</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -223,7 +230,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/H2317069.jpeg' %}" alt=""></div>
             <h1>NSG024</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -232,7 +239,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/YTB001.jpeg' %}" alt=""></div>
             <h1>YTB001</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -241,7 +248,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/YTB005.jpeg' %}" alt=""></div>
             <h1>YTB005</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -250,7 +257,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/YTB008.jpeg' %}" alt=""></div>
             <h1>YTB008</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -259,7 +266,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/YTB010.jpeg' %}" alt=""></div>
             <h1>YTB010</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
@@ -268,7 +275,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/YTB012.jpeg' %}" alt=""></div>
             <h1>YTB012</h1>
             <h2>Human, Lung </h2>
             <p>Sex: F<br />
@@ -277,7 +284,7 @@
         </div>
 
         <div class="card">
-            <div class="photo"><img src="{% static 'images/capture1.PNG' %}" alt=""></div>
+            <div class="photo"><img src="{% static 'images/spots/YTB015.jpeg' %}" alt=""></div>
             <h1>YTB015</h1>
             <h2>Human, Lung </h2>
             <p>Sex: M<br />
