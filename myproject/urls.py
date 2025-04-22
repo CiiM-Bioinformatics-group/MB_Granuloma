@@ -67,6 +67,8 @@ urlpatterns = [
     path('contacts/', TemplateView.as_view(template_name="contacts.html"), name="contacts"),
     path('lungs/', TemplateView.as_view(template_name="lungs.html"), name="lungs"),
     path('lymph/', TemplateView.as_view(template_name="lymph.html"), name="lymph"),
+    path('MTB/', TemplateView.as_view(template_name="MTB.html"), name="MTB"),
+    path('NTM/', TemplateView.as_view(template_name="NTM.html"), name="NTM"),
     path('sample/', TemplateView.as_view(template_name="sample.html"), name="sample"),
 
     path('dataview1/', TemplateView.as_view(template_name="dataview1.html"), name="dataview1"),
