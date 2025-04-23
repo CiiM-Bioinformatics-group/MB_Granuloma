@@ -54,8 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
-    
-
 
 
 const header = document.querySelector("header");
@@ -75,3 +73,16 @@ const header = document.querySelector("header");
         header.classList.remove("bg1", "bg2");
       }
     });
+
+  
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.label-box').forEach(link => {
+    if (currentPath.startsWith(link.getAttribute('href'))) {
+      link.classList.add('active');
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    lucide.createIcons();
+  });
+  

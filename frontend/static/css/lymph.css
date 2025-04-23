@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+  
+  /* ul {
+    list-style: none;
+  }*/
+  
+  .header{
+    width: 80%; /* 可以根据需要调整宽度 */
+    background-color: transparent;
+  
+    display: flex;
+    justify-content: center; /* 水平居中 */
+  }
+  
+  .navbar {
+    display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      width: 80%; /* 根据需要调整宽度 */
+      max-width: 1200px; /* 限制最大宽度 */
+      margin: 0 auto; /* 确保水平居中 */
+  }
+  
+  .nav-image {
+    height: 50px;
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+  
+    border-radius: 5px;
+  }
+  
+  .nav-links .active a {
+    font-weight: bold; /* 加粗显示 */
+  }
+  
+  .know-more-btn {
+    display: inline-block; /* 让 a 标签表现得像按钮 */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    margin-top: 15px; /* 让按钮向下移动 10px，可以调整数值 */
+}
+
+  
+  
+  .bg1 {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .bg2 {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+  }
+  body > header {
+    z-index: 90;
+    width: 100%;
+    height: 117px;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: 0.15s;
+  }
+  body > header > img {
+    width: 90px;
+  }
+  body > header > ul {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: flex;
+    gap: 40px;
+  }
+  body > header > ul > li {
+    transition: 0.15s;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+  }
+  body > header > ul > li:hover {
+    border-bottom-color: #fff;
+  }
+  body > header > svg {
+    margin-left: auto;
+    margin-right: 5rem;
+    width: 64px;
+    height: 64px;
+  }
+
+body {
+    /* 100%窗口高度 */
+    min-height: 100vh;
+    /* 弹性布局 水平+垂直居中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 渐变背景 */
+   height: 100vh;
+   /* background-image: url("../images/pg.jpg"); */
+   background-color: #000000e1;
+   border-color: #666666;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   color: #fff;
+   font-family: 'Roboto', 'Roboto Fallback', sans-serif; /* 设置全局字体 */
+   padding-top: 80px; /* 增加上边距，使内容远离 header */
+}
+
+main {
+    width: 65%;
+    margin: 100px auto; /* 居中对齐，并增加上下边距 */
+    padding:  20px 20px 40px;
+  }
+
+.container {
+    /* 容器居中 */
+    display: grid;
+    /* margin-top: 200px; Increase the space between the header and container */
+    grid-template-columns: repeat(3, 1fr); /* 每行5列 */
+    grid-gap: 12px;
+    justify-items: center;
+    align-items: center;
+    flex: 1;
+}
+
+.section-title {
+  grid-column: 1 / -1; /* 横跨整个网格行 */
+  margin-bottom: 20px;
+  padding-left: 10px;
+  
+}
+
+.section-title h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff; /* 或你页面背景下能看的颜色 */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  
+}
+
+.card {
+  /* 相对定位 */
+  position: relative;
+  width: 150px; /* 调整卡片大小 */
+  height: 225px; /* 调整卡片大小 */
+  margin: 10px;
+  background-color: #000000b0;
+  border-radius: 10px;
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 弹性布局 */
+  display: flex;
+  /* 元素纵向排列 */
+  flex-direction: column;
+  /* 居中 */
+  align-items: center;
+  color: #fff;
+  /* 阴影 */
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  /* 不让其被挤压 */
+  flex-shrink: 0;
+}
+
+.card .photo img {
+  width: 100%;
+  height: 100%;
+  /* 保持原有尺寸比例，裁切长边 */
+  object-fit: cover;
+}
+
+/* 默认大图 */
+.card .photo {
+  /* 绝对定位 */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  overflow: hidden;
+  /* 动画过渡 */
+  transition: 0.5s;
+}
+
+/* 鼠标移入变小图 */
+.card:hover .photo {
+  top: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+/* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+.card .photo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, #222);
+}
+
+.card h1 {
+  position: absolute;
+  top: 185px;
+  transition: 0.5s;
+  font-size: 18px; /* 调整文字大小 */
+}
+
+.card:hover h1 {
+  top: 85px;
+}
+
+.card h2 {
+  margin-top: 110px;
+  width: 80%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 10px; /* 调整文字大小 */
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.card p {
+width: 80%;
+text-align: left; /* justify为两端对齐 */
+
+font-size: 10px; /* 调整文字大小 */
+margin-bottom: 7px;
+line-height: 15px;
+margin-left: auto; /* 让 p 居中 */
+margin-right: auto; /* 让 p 居中 */
+}
+
+
+.card a {
+  font-size: 7px; /* 调整文字大小 */
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+
+.card a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.219);
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+

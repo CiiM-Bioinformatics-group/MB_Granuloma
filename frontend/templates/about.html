@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>stAtlas | About</title>
+    <title>mbAtlas | About</title>
     
     <!-- 正确的静态文件路径 -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- 预加载背景图片 -->
-    <link rel="preload" href="{% static 'images/pg5.jpg' %}" as="image">
+    <!-- <link rel="preload" href="{% static 'images/pg5.jpg' %}" as="image"> -->
     
     <!-- 正确的 JavaScript 文件路径 -->
     <script src="{% static 'js/about.js' %}" defer></script>
@@ -20,30 +23,37 @@
 <body>
 <header>
     <nav class="navbar">   
-        <a href="https://lab-li.ciim-hannover.de/">
-            <img src="{% static 'images/lab_li.png' %}" alt="Lab Logo" width="120" height="60">  
-        </a>
+        <a href="https://www.helmholtz-hzi.de">
+            <img src="https://www.helmholtz-hzi.de/_assets/ae8a1fe32f30b295243325c1db1b8058/Images/Assets/logo-hzi-white.svg" alt="" width="220" height="60" >  
+          </a>
+    
+          <a href="https://lab-li.ciim-hannover.de/">
+            <img src="{% static 'images/lab_li.png' %}" alt="" width="100" height="50" >  
+          </a>
 
         <ul class="nav-links">
             <li><a href="{% url 'home' %}">Home</a></li>
             <!-- <li><a href="{% url 'mapping' %}">Mapping</a></li> -->
-            <li><a href="{% url 'datasets' %}">Datasets</a></li>
+            <li><a href="{% url 'datasets' %}">Overview</a></li>
             <!-- <li><a href="{% url 'search' %}">Search</a></li> -->
-            <li><a href="{% url 'help' %}">Help</a></li>
+            <li><a href="{% url 'sample' %}">Datasets</a></li> 
             <li class="active"><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'contacts' %}">Contact</a></li>
         </ul>
 
         <a href="https://www.ciim-hannover.de/en/" target="_blank">
-            <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120" height="60" alt="CiiM">
-        </a>
+            <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
+          </a>
+          <a href="https://www.mhh.de">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Medizinische_Hochschule_Hannover_logo.svg/1600px-Medizinische_Hochschule_Hannover_logo.svg.png" alt="" width="220" height="60" >  
+          </a>
     </nav>
 </header>
 
     
       <main>
         <section id="about">
-            <h2>About stRNAAtlas</h2>
+            <h2>About MBG-stAtlas</h2>
             <p> Welcome to the Mycobacterial Granuloma Spatial Atlas, an interactive web platform designed to explore the spatial organization and molecular dynamics of granulomas induced by mycobacterial infections. Utilizing state-of-the-art spatial transcriptomics, our comprehensive atlas reveals distinct granuloma niches—each characterized by specialized immune cells, signaling pathways, and tissue remodeling processes. Our dataset encompasses a diverse array of granulomas from tuberculosis (TB), non-tuberculous mycobacterial (NTM) infections, lymphoid tissues, and sarcoidosis, highlighting unique features that differentiate infectious from non-infectious granulomatous diseases.
                 This webtool allows researchers to:</p>
               <br>
@@ -62,7 +72,7 @@
 
         <section id="license">
             <h2>License</h2>
-            <p>stRNAAtlas is open and free for everyone to use and there is no login requirement. </p>
+            <p>MBG-stAtlas is open and free for everyone to use and there is no login requirement. </p>
         </section>
 
         <section id="acknowledgement">
@@ -77,11 +87,29 @@
                   L.N. and J.C.S. are supported by the Ann Theodore Foundation and the German Center for Lung Research (FKZ 82DZL002B1, FKZ 82DZL002C1 & FKZ 82DZLT82C1). 
                   MK is supported by the Deutsche Forschungsgemeinschaft (KA 6005/1-1).</p>
         </section>
+
+        <section id="Citation">
+            <h2>Citation</h2>
+            <p> Xun Jiang, Leonard Christian, Yuesi Xi, Jonas C. Schupp, Yang Li et al., 
+                Spatial transcriptomics reveals immune and tissue remodeling, 
+                highlighting diverse host responses across mycobacterial
+                granuloma types. 2025, https://doi.org/xxx <br></br>
+
+                MBG-Atlas: Welcome to the Mycobacterial Granuloma Spatial Atlas, 
+                an interactive web platform designed to explore the spatial organization and molecular
+                dynamics of granulomas induced by mycobacterial infections. Utilizing state-of-the-art 
+                spatial transcriptomics, our comprehensive atlas reveals distinct granuloma niches—each 
+                characterized by specialized immune cells, signaling pathways, and tissue remodeling processes. 
+                Our dataset encompasses a diverse array of granulomas from tuberculosis (TB), 
+                non-tuberculous mycobacterial (NTM) infections, lymphoid tissues, and sarcoidosis,
+                highlighting unique features that differentiate infectious from non-infectious granulomatous diseases.</p>
+        </section>
+
     </main>
 
 
 
-    <div>© 2025 All Rights Reserved | Yang Li lab of CiiM</div>
+    <div>© 2025 All Rights Reserved | AG-Li of CiiM</div>
   </body>
 
 

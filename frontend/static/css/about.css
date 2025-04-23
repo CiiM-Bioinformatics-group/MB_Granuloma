@@ -61,8 +61,6 @@
 }
 
 
-
-
 .bg1 {
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
@@ -73,7 +71,8 @@
 
 body {
   height: 100vh;
-  background-image: url("../images/pg5.jpg");
+  /* background-image: url("../images/pg5.jpg"); */
+  background-color: #000000e5;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -149,17 +148,20 @@ section h2 {
 
 section p {
   line-height: 1.6;
-}
-
-section:first-of-type h2 {
-  text-align: center;
-}
-
-section:first-of-type p {
   text-align: left;
 }
 
+#license p {
+  text-align: center;
+}
 
+/* section:first-of-type h2 {
+  text-align: center;
+}*/
+
+/* section:second-of-type p {
+  text-align: center;
+}  */
 
 
 body > div {

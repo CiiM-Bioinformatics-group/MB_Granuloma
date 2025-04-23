@@ -72,7 +72,8 @@
   
   body {
     height: 100vh;
-    background-image: url("../images/pg5.jpg");
+    /* background-image: url("../images/pg5.jpg"); */
+    background-color: #000000e5;
     border-color: #666666;
     background-position: center;
     background-repeat: no-repeat;

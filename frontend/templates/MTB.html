@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>mbAtlas | Datasets| Lung</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/MTB.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="{% static 'images/pg9.jpg' %}" as="image">
+    <script src="{% static 'js/MTB.js' %}" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar">   
+            <a href="https://www.helmholtz-hzi.de">
+                <img src="https://www.helmholtz-hzi.de/_assets/ae8a1fe32f30b295243325c1db1b8058/Images/Assets/logo-hzi-white.svg" alt="" width="220" height="60" >  
+              </a>
+      
+              <a href="https://lab-li.ciim-hannover.de/">
+                <img src="{% static 'images/lab_li.png' %}" alt="" width="100" height="50" >  
+              </a>
+      
+              <ul class="nav-links">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'datasets' %}">Overview</a></li>
+                  <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'contacts' %}">Contact</a></li>
+              </ul>
+      
+              <a href="https://www.ciim-hannover.de/en/" target="_blank">
+                <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
+              </a>
+              <a href="https://www.mhh.de">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Medizinische_Hochschule_Hannover_logo.svg/1600px-Medizinische_Hochschule_Hannover_logo.svg.png" alt="" width="220" height="60" >  
+              </a>
+      
+        </nav>
+    
+        </header>
+    <main>
+    
+        <!-- 重复的卡片元素 -->
+        <div class="section-title">
+            <h2>Mycobacterium tuberculosis (MTB) granulomas Samples</h2>
+          </div>
+
+     <div class="container">
+        
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB3.jpeg' %}" alt=""></div>
+            <h1>ACPMB3</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 34<br />
+            <a href="{% url 'ACPMB003' %}" class="know-more-btn">Know More</a>
+        </div>
+
+        
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB6.jpeg' %}" alt=""></div>
+            <h1>ACPMB6</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 21<br />
+            <a href="{% url 'ACPMB006' %}" class="know-more-btn">Know More</a>
+
+        </div>
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB7.jpeg' %}" alt=""></div>
+            <h1>ACPMB7</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 47<br />
+            <a href="{% url 'ACPMB007' %}" class="know-more-btn">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB8.jpeg' %}" alt=""></div>
+            <h1>ACPMB8</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 39<br />
+            <a href="{% url 'ACPMB008' %}" class="know-more-btn">Know More</a>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB9.jpeg' %}" alt=""></div>
+            <h1>ACPMB9</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 58<br />
+            <a href="{% url 'ACPMB009' %}" class="know-more-btn">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB10.jpeg' %}" alt=""></div>
+            <h1>ACPMB10</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 25<br />
+            <a href="{% url 'ACPMB010' %}" class="know-more-btn">Know More</a>
+        </div>
+
+        
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H1116034.jpeg' %}" alt=""></div>
+            <h1>NSG013</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 59<br />
+            <a href="{% url 'NSG013' %}">Know More</a>
+        </div>
+
+        
+        
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H2213396.jpeg' %}" alt=""></div>
+            <h1>NSG017</h1>
+            <h2>Human, Lymphnode </h2>
+            <p>Sex: F<br />
+               Age: 13<br />
+               <!-- Bacteria: M. xenopi -->
+            </p>
+            <a href="{% url 'NSG017' %}" class="know-more-btn">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H2311362.jpeg' %}" alt=""></div>
+            <h1>NSG019</h1>
+            <h2>Human, Lymphnode </h2>
+            <p>Sex: F<br />
+               Age: 71<br />
+            </p>
+            <a href="{% url 'NSG019' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H211394119.jpeg' %}" alt=""></div>
+            <h1>NSG023</h1>
+            <h2>Human, Lymphnode </h2>
+            <p>Sex: F<br />
+               Age: 68<br />
+            <a href="{% url 'NSG023' %}">Know More</a>
+        </div>
+       
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB001.jpeg' %}" alt=""></div>
+            <h1>YTB001</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 81<br />
+            <a href="{% url 'YTB001' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB005.jpeg' %}" alt=""></div>
+            <h1>YTB005</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 35<br />
+            <a href="{% url 'YTB005' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB001.jpeg' %}" alt=""></div>
+            <h1>YTB006</h1>
+            <h2>Human, Lymphnode </h2>
+            <p>Sex: F<br />
+               Age: 64<br />
+            <a href="{% url 'YTB006' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB008.jpeg' %}" alt=""></div>
+            <h1>YTB008</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 59<br />
+            <a href="{% url 'YTB008' %}">Know More</a>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB009.jpeg' %}" alt=""></div>
+            <h1>YTB009</h1>
+            <h2>Human, Lymphnode </h2>
+            <p>Sex: F<br />
+               Age: 64<br />
+            <a href="{% url 'YTB009' %}">Know More</a>
+        </div>
+        
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB010.jpeg' %}" alt=""></div>
+            <h1>YTB010</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 63<br />
+            <a href="{% url 'YTB010' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB012.jpeg' %}" alt=""></div>
+            <h1>YTB012</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 79<br />
+            <a href="{% url 'YTB012' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB015.jpeg' %}" alt=""></div>
+            <h1>YTB015</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 71<br />
+            <a href="{% url 'YTB015' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/YTB019.jpeg' %}" alt=""></div>
+            <h1>YTB019</h1>
+            <h2>Human, Lymphnode </h2>
+            <p>Sex: M<br />
+               Age: 1<br />
+            <a href="{% url 'YTB019' %}">Know More</a>
+        </div>
+
+        <!-- ...复制上面的卡片，直到总数达到40个... -->
+    </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 All Rights Reserved | AG-Li of CiiM</p>
+    </footer>
+</body>
+
+</html>

@@ -5,9 +5,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>stAtlas | Home</title>
+    <title>mbAtlas | Home</title>
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- 引入 JavaScript 文件 -->
     <script src="{% static 'js/home.js' %}" defer></script>
@@ -17,42 +19,41 @@
   <body>
     <header>
     <nav class="navbar">   
-      <a href="https://lab-li.ciim-hannover.de/">
-        <img src="{% static 'images/lab_li.png' %}" alt="" width="120" height="60" >  
+      
+      
+      <a href="https://www.helmholtz-hzi.de">
+        <img src="https://www.helmholtz-hzi.de/_assets/ae8a1fe32f30b295243325c1db1b8058/Images/Assets/logo-hzi-white.svg" alt="" width="220" height="60" >  
       </a>
-    
-    
+
+      <a href="https://lab-li.ciim-hannover.de/">
+        <img src="{% static 'images/lab_li.png' %}" alt="" width="100" height="50" >  
+      </a>
+
       <ul class="nav-links">
         <li class="active"><a href="{% url 'home' %}">Home</a></li>
         <!-- <li><a href="{% url 'mapping' %}">Mapping</a></li> -->
-        <li><a href="{% url 'datasets' %}">Datasets</a></li>
+        <li><a href="{% url 'datasets' %}">Overview</a></li>
         <!-- <li><a href="{% url 'search' %}">Search</a></li> -->
-        <li><a href="{% url 'help' %}">Help</a></li>
-        <li><a href="{% url 'contacts' %}">Contact</a></li>
+        <li><a href="{% url 'sample' %}">Datasets</a></li> 
         <li><a href="{% url 'about' %}">About</a></li>
-        
+        <li><a href="{% url 'contacts' %}">Contact</a></li>
       </ul>
      
       
         <a href="https://www.ciim-hannover.de/en/" target="_blank">
           <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
         </a>
+
+        <a href="https://www.mhh.de">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Medizinische_Hochschule_Hannover_logo.svg/1600px-Medizinische_Hochschule_Hannover_logo.svg.png" alt="" width="220" height="60" >  
+        </a>
     </nav>
 
     </header>
 
     <section>
-      <p>STRNAATLAS</p>
+      <p>MBG-ATLAS</p>
       <span>
-        <!-- stRNAAtlas is an integrated web server for accurate and flexible spatial
-        mapping of user-uploaded single-cell RNA-seq (scRNA-seq) data. It is
-        founded on a manually<br />
-        curated compilation of spatial transcriptomics datasets across diverse
-        organs, developmental stages and pathological states. The tissue-scale
-        spatial cellular maps<br />
-        would subsequently facilitate the interpretation of intercellular
-        communications in the spatial context. -->
-
         Welcome to the Mycobacterial Granuloma Spatial Atlas, an interactive web 
         platform designed to explore the spatial organization and molecular dynamics 
         of granulomas induced <br />
@@ -66,32 +67,26 @@
         infectious from non-infectious granulomatous diseases. 
       </span>
       <button id="know-more-btn" data-url="{% url 'about' %}">Know More</button>
-      <!-- <div class="button-wrap">
-        <button id="know-more-btn" data-url="{% url 'about' %}">
-          <span>Know More</span>
-        </button>
-        <div class="button-shadow"></div>
-      </div> -->
+
       
     </section>
-
-
 
     <main>
       <section>
         <p>
-          SPATIAL<br />
-          MAPPING
+          GRANULOMA<br />
+          LANDSCAPE
         </p>
 
         <div>
-          <img src="{% static 'images/capture1.png' %}" alt="" width="365" data-url="{% url 'datasets' %}" onclick="redirectToPage(this)"/>
+          <img src="{% static 'images/capture3.jpg' %}" alt="" width="365" data-url="{% url 'datasets' %}" onclick="redirectToPage(this)"/>
 
-          <span>Spatial Mapping</span>
+          <span>Granuloma Landscape</span>
           <span>
-            The key tool designed for accurate spatial mapping for scRNA-seq
-            data<br />
-            based on properly matched spatial transcriptomics data.
+            Access the full overview of the study, summarizing all key findings  <br />
+            across 33 patient samples—including lymph node, pulmonary, <br /> 
+            MTB, and NTM granulomas. Explore five spatial niches, <br />
+            immune features, and disease-specific signatures.
           </span>
         </div>
       </section>
@@ -103,14 +98,14 @@
         </p>
 
         <div>
-          <img src="{% static 'images/capture2.png' %}" alt="" width="365" data-url="{% url 'lungs' %}" onclick="redirectToPage(this)"/>
+          <img src="{% static 'images/capture1.png' %}" alt="" width="365" data-url="{% url 'sample' %}" onclick="redirectToPage(this)"/>
 
           <span>Dataset Browser</span>
           <span>
-            Dataset browser comprises modules of meta information, basic<br />
-            visualization and files download of curated ST datasets.
-            Additionally,<br />
-            specific gene searches can also be performed.
+          
+            Browse metadata and spatial transcriptomics data with basic  <br /> 
+            visualizations across 33 patient samples. Search for specific <br />  
+            genes across samples and explore quality metrics.
           </span>
         </div>
       </section>
@@ -129,7 +124,7 @@
             30625 Hannover<br />
           </span>
 
-          <p>Telefon: +49 511 22002 7226</p>
+          <p>Telefon: +49 511 220027200</p>
         </div>
 
         <form id="contactForm">
@@ -153,7 +148,7 @@
     </footer>
 
     <!-- <div>© 2025 All Rights Reserved | Yang Li lab of CiiM</div> -->
-    <div>© <span id="footer-year"> </span>  All Rights Reserved | Yang Li lab of CiiM</div>
+    <div>© <span id="footer-year"> </span>  All Rights Reserved | AG-Li of CiiM</div>
 
   </body>
 

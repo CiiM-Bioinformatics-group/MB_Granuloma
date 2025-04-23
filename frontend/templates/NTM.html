@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>mbAtlas | Datasets| Lymph</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/NTM.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="{% static 'images/pg9.jpg' %}" as="image">
+    <script src="{% static 'js/NTM.js' %}" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar">   
+            <a href="https://www.helmholtz-hzi.de">
+                <img src="https://www.helmholtz-hzi.de/_assets/ae8a1fe32f30b295243325c1db1b8058/Images/Assets/logo-hzi-white.svg" alt="" width="220" height="60" >  
+              </a>
+      
+              <a href="https://lab-li.ciim-hannover.de/">
+                <img src="{% static 'images/lab_li.png' %}" alt="" width="100" height="50" >  
+              </a>
+      
+              <ul class="nav-links">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'datasets' %}">Overview</a></li>
+                  <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'contacts' %}">Contact</a></li>
+              </ul>
+      
+              <a href="https://www.ciim-hannover.de/en/" target="_blank">
+                <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
+              </a>
+              <a href="https://www.mhh.de">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Medizinische_Hochschule_Hannover_logo.svg/1600px-Medizinische_Hochschule_Hannover_logo.svg.png" alt="" width="220" height="60" >  
+              </a>
+      
+        </nav>
+    
+        </header>
+    <main>
+    
+        <!-- 重复的卡片元素 -->
+        <div class="section-title">
+            <h2>non-tuberculous mycobacteria (NTM) granulomas Samples</h2>
+          </div>
+
+     <div class="container">
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB1.jpeg' %}" alt=""></div>
+            <h1>ACPMB1</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 58<br />
+               <!-- Bacteria: M. xenopi -->
+            </p>
+            <a href="{% url 'dataview1' %}" class="know-more-btn">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB2.jpeg' %}" alt=""></div>
+            <h1>ACPMB2</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 64<br />
+            </p>
+            <a href="{% url 'ACPMB002' %}" class="know-more-btn">Know More</a>
+        </div>
+      
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB4.jpeg' %}" alt=""></div>
+            <h1>ACPMB4</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 69<br />
+            <a href="{% url 'ACPMB004' %}" class="know-more-btn">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB5.jpeg' %}" alt=""></div>
+            <h1>ACPMB5</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 76<br />
+               <a href="{% url 'ACPMB005' %}" class="know-more-btn">Know More</a>
+        </div>
+        
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB11.jpeg' %}" alt=""></div>
+            <h1>ACPMB11</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 50<br />
+            <a href="{% url 'ACPMB011' %}">Know More</a>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB13.jpeg' %}" alt=""></div>
+            <h1>ACPMB13</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 66<br />
+            <a href="{% url 'ACPMB013' %}">Know More</a>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB14.jpeg' %}" alt=""></div>
+            <h1>ACPMB14</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 76<br />
+            <a href="{% url 'ACPMB014' %}">Know More</a>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/ACPMB16.jpeg' %}" alt=""></div>
+            <h1>ACPMB16</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 74<br />
+            <a href="{% url 'ACPMB016' %}">Know More</a>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H1219915.jpeg' %}" alt=""></div>
+            <h1>NSG005</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 49<br />
+            <a href="{% url 'NSG005' %}">Know More</a>
+        </div>
+       
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H222587.jpeg' %}" alt=""></div>
+            <h1>NSG014</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: M<br />
+               Age: 52<br />
+            <a href="{% url 'NSG014' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H2311362.jpeg' %}" alt=""></div>
+            <h1>NSG019</h1>
+            <h2>Human, Lymphnode </h2>
+            <p>Sex: F<br />
+               Age: 71<br />
+            </p>
+            <a href="{% url 'NSG019' %}">Know More</a>
+        </div>
+        
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H23_25536.jpeg' %}" alt=""></div>
+            <h1>NSG020_1</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 71<br />
+            <a href="{% url 'NSG020_1' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H2315532.jpeg' %}" alt=""></div>
+            <h1>NSG020_2</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 71<br />
+            <a href="{% url 'NSG020_2' %}">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/2315332.jpeg' %}" alt=""></div>
+            <h1>NSG020_3</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 71<br />
+            <a href="{% url 'NSG020_3' %}">Know More</a>
+        </div>
+        
+        <div class="card">
+            <div class="photo"><img src="{% static 'images/spots/H2317069.jpeg' %}" alt=""></div>
+            <h1>NSG024</h1>
+            <h2>Human, Lung </h2>
+            <p>Sex: F<br />
+               Age: 60<br />
+            <a href="{% url 'NSG024' %}">Know More</a>
+        </div>
+        
+
+        
+        
+    </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 All Rights Reserved | AG-Li of CiiM</p>
+    </footer>
+</body>
+
+</html>

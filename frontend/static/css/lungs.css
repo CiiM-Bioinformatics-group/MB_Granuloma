@@ -126,7 +126,8 @@ body {
     align-items: center;
     /* 渐变背景 */
    height: 100vh;
-   background-image: url("../images/pg9.jpg");
+   /* background-image: url("../images/pg.jpg"); */
+   background-color: #000000e1;
    border-color: #666666;
    background-position: center;
    background-repeat: no-repeat;
@@ -140,13 +141,13 @@ body {
 main {
     width: 65%;
     margin: 100px auto; /* 居中对齐，并增加上下边距 */
-    padding: 20px;
+    padding: 1100px 20px 40px;
   }
 
 .container {
     /* 容器居中 */
     display: grid;
-    margin-top: 200px; /* Increase the space between the header and container */
+    /* margin-top: 200px; Increase the space between the header and container */
     grid-template-columns: repeat(5, 1fr); /* 每行5列 */
     grid-gap: 12px;
     justify-items: center;
@@ -154,112 +155,128 @@ main {
     flex: 1;
 }
 
+.section-title {
+  grid-column: 1 / -1; /* 横跨整个网格行 */
+  margin-bottom: 20px;
+  padding-left: 10px;
+  
+}
+
+.section-title h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff; /* 或你页面背景下能看的颜色 */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  
+}
+
 .card {
-    /* 相对定位 */
-    position: relative;
-    width: 150px; /* 调整卡片大小 */
-    height: 225px; /* 调整卡片大小 */
-    margin: 10px;
-    background-color: #000000b0;
-    border-radius: 10px;
-    /* 溢出隐藏 */
-    overflow: hidden;
-    /* 弹性布局 */
-    display: flex;
-    /* 元素纵向排列 */
-    flex-direction: column;
-    /* 居中 */
-    align-items: center;
-    color: #fff;
-    /* 阴影 */
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    /* 不让其被挤压 */
-    flex-shrink: 0;
+  /* 相对定位 */
+  position: relative;
+  width: 150px; /* 调整卡片大小 */
+  height: 225px; /* 调整卡片大小 */
+  margin: 10px;
+  background-color: #000000b0;
+  border-radius: 10px;
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 弹性布局 */
+  display: flex;
+  /* 元素纵向排列 */
+  flex-direction: column;
+  /* 居中 */
+  align-items: center;
+  color: #fff;
+  /* 阴影 */
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  /* 不让其被挤压 */
+  flex-shrink: 0;
 }
 
 .card .photo img {
-    width: 100%;
-    height: 100%;
-    /* 保持原有尺寸比例，裁切长边 */
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* 保持原有尺寸比例，裁切长边 */
+  object-fit: cover;
 }
 
 /* 默认大图 */
 .card .photo {
-    /* 绝对定位 */
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 0%;
-    overflow: hidden;
-    /* 动画过渡 */
-    transition: 0.5s;
+  /* 绝对定位 */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  overflow: hidden;
+  /* 动画过渡 */
+  transition: 0.5s;
 }
 
 /* 鼠标移入变小图 */
 .card:hover .photo {
-    top: 15px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  top: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
 /* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
 .card .photo::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent 50%, #222);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, #222);
 }
 
 .card h1 {
-    position: absolute;
-    top: 185px;
-    transition: 0.5s;
-    font-size: 18px; /* 调整文字大小 */
+  position: absolute;
+  top: 185px;
+  transition: 0.5s;
+  font-size: 18px; /* 调整文字大小 */
 }
 
 .card:hover h1 {
-    top: 85px;
+  top: 85px;
 }
 
 .card h2 {
-    margin-top: 110px;
-    width: 80%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    font-size: 10px; /* 调整文字大小 */
-    text-align: center;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+  margin-top: 110px;
+  width: 80%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 14px; /* 调整文字大小 */
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .card p {
-  width: 80%;
-  text-align: left; /* justify为两端对齐 */
-  
-  font-size: 9px; /* 调整文字大小 */
-  margin-bottom: 7px;
-  line-height: 15px;
-  margin-left: auto; /* 让 p 居中 */
-  margin-right: auto; /* 让 p 居中 */
+width: 80%;
+text-align: left; /* justify为两端对齐 */
+
+font-size: 12px; /* 调整文字大小 */
+margin-bottom: 7px;
+line-height: 15px;
+margin-left: auto; /* 让 p 居中 */
+margin-right: auto; /* 让 p 居中 */
 }
 
 
 .card a {
-    font-size: 7px; /* 调整文字大小 */
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 4px 16px;
-    border-radius: 4px;
+  font-size: 7px; /* 调整文字大小 */
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 4px 16px;
+  border-radius: 4px;
 }
 
 .card a:hover {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.219);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.219);
 }
 
 .footer {

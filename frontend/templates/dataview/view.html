@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <title>mbAtlas | Datasets | Samples</title>
+    <link rel="stylesheet" href="{% static 'css/dataview1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+    <script src="{% static 'js/dataview1.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="https://www.helmholtz-hzi.de">
+                <img src="https://www.helmholtz-hzi.de/_assets/ae8a1fe32f30b295243325c1db1b8058/Images/Assets/logo-hzi-white.svg" alt="" width="220" height="60" >  
+              </a>
+      
+              <a href="https://lab-li.ciim-hannover.de/">
+                <img src="{% static 'images/lab_li.png' %}" alt="" width="100" height="50" >  
+              </a>
+      
+              <ul class="nav-links">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'datasets' %}">Overview</a></li>
+                  <li class="active"><a href="{% url 'sample' %}">Datasets</a></li> 
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'contacts' %}">Contact</a></li>
+              </ul>
+      
+              <a href="https://www.ciim-hannover.de/en/" target="_blank">
+                <img src="{% static 'images/CiiM-Header-Logo-white.svg' %}" width="120"  height="60"   alt="CiiM">
+              </a>
+              <a href="https://www.mhh.de">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Medizinische_Hochschule_Hannover_logo.svg/1600px-Medizinische_Hochschule_Hannover_logo.svg.png" alt="" width="220" height="60" >  
+              </a>
+      
+        </nav>
+    </header>
+
+    <div>
+        <nav>
+            <ul id="list">
+                <li><a href="#Summary" class="active">Summary</a></li>
+                <li><a href="#Sample">Sample</a></li>
+                <li><a href="#Sections">Sections</a></li>
+                <li><a href="#View">View</a></li>
+                <li><a href="#Source">Source</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h4 id="Summary">Dataset</h4>
+            <h2>{{ dataset.title }}</h2>
+            <div>
+                <span>Normal Tissue</span>
+                <span>{{ dataset.species }}</span>
+            </div>
+
+            <section class="card1">
+                <div><strong>Sample ID</strong><span>{{ dataset.sample_id }}</span></div>
+                <!-- <div><strong>PubID</strong><span>{{ dataset.pubid }}</span></div> -->
+                <div><strong>Method</strong><span>{{ dataset.method }}</span></div>
+            </section>
+
+            <section class="card2">
+                <header>
+                    <span id="Sample">Sample</span>
+                    <svg viewBox="64 64 896 896">...</svg>
+                    <div></div>
+                </header>
+                <main>
+                    <section><strong>Species</strong><span>{{ dataset.species }}</span></section>
+                    <section><strong>Tissue_Type</strong><span>{{ dataset.tissue_type }}</span></section>
+                    <section><strong>Granuloma description</strong><span>{{ dataset.granuloma_description }}</span></section>
+                    <section><strong>Age</strong><span>{{ dataset.age }}</span></section>
+                    <section><strong>Sex</strong><span>{{ dataset.sex }}</span></section>
+                    <section><strong>bacteria</strong><span>{{ dataset.bacteria }}</span></section>
+                    <section><strong>Note</strong><span>Formalin-fixed paraffin-embedded (FFPE) tissues</span></section>
+                </main>
+            </section>
+
+            <section class="card2">
+                <header>
+                    <span id="Sections">Sections</span>
+                    <svg viewBox="64 64 896 896">...</svg>
+                    <div></div>
+                </header>
+                <main>
+                    <section><strong>Number of Sections</strong><span>1</span></section>
+                    <section><strong>Slide Number</strong><span>{{ dataset.slide_number }}</span></section>
+                </main>
+            </section>
+
+            <section class="card2 view">
+                <header>
+                    <span id="View">View</span>
+                    <svg viewBox="64 64 896 896">...</svg>
+                    <div></div>
+                </header>
+                <section>
+                    <div><span>Slide Number: </span></div>
+                    <select><option value="">{{ dataset.slide_number }}</option></select>
+                </section>
+                <main>
+                    <header>
+                        <button><svg viewBox="0 0 24 24" fill="#fff" width="15">...</svg></button>
+                        <span>2,082 spots</span>
+                        <div class="active">Embeddings</div>
+                        <div>Distributions</div>
+                        <button><svg viewBox="0 0 24 24">...</svg></button>
+                        <button><svg viewBox="0 0 24 24">...</svg></button>
+                    </header>
+                    <nav>
+                        <p>Explore</p>
+                        <select><option value="">Embeddings</option></select>
+                        <div><span>Tissue_hires</span><svg viewBox="0 0 24 24">...</svg></div>
+                        <div class="gene-input-wrapper">
+                            <input type="text" id="gene-selector" placeholder="Select or type gene" autocomplete="off" />
+                            <ul id="gene-suggestions" class="gene-suggestions hidden"></ul>
+                        </div>
+                        <div><svg viewBox="0 0 24 24">...</svg><span>leiden0.5</span><svg viewBox="0 0 24 24">...</svg></div>
+                        <select><option value="">Sets</option></select>
+                        <p>View</p>
+                        <span>Opacity</span>
+                        <input type="range" />
+                        <span>Filtered Marker Opacity</span>
+                        <input type="range" />
+                        <input type="text" placeholder="Marker Size" />
+                        <input type="text" placeholder="Filtered Marker Size" />
+                        <input type="text" placeholder="Gallery Chart Size" />
+                        <span>Color Scheme</span>
+                        <input type="color" value="#ADD93F" />
+                    </nav>
+                    <div class="main-image-container">
+                        <img id="image-display" src="{{ dataset.default_img }}" style="max-width: 90%; margin-top: 20px;" />
+                    </div>
+                    <section></section>
+                </main>
+            </section>
+
+            <section class="card2 source">
+                <header>
+                    <span id="Source">Source</span>
+                    <svg viewBox="64 64 896 896">...</svg>
+                    <div></div>
+                </header>
+                <main>
+                    <div><strong>Title</strong><span>Spatial Transcriptomics of Mycobacterial Granuloma</span></div>
+                    <div><strong>Journal</strong><span>- -</span></div>
+                    <div><strong>PMID</strong><span>- -</span></div>
+                    <div><strong>URL</strong><span>https://doi.org</span></div>
+                </main>
+            </section>
+        </main>
+    </div>
+
+    <footer>© 2025 All Rights Reserved | AG-Li of CiiM</footer>
+</body>
+</html>
