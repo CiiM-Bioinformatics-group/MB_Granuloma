@@ -2,10 +2,14 @@
 import os, json
 import scanpy as sc
 import matplotlib.pyplot as plt
+from django.conf import settings
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .preload import adata, sampleID
+
+def load_adata(pubid):
+    file_path = os.path.join(settings.MY_ANNDATA_DIR, f"{pubid}.h5ad")
+    return sc.read_h5ad(file_path)
 
 def acpmb006_page(request):
     dataset = {
@@ -17,15 +21,16 @@ def acpmb006_page(request):
         'sex': 'M',
         'bacteria': 'M. tuberculosis complex',
         'slide_number': 'V53F21-076',
-        'sample_id': sampleID,
+        'sample_id': 'ACPMB6',
         'pubid': 'ACPMB006',
         'method': 'Visium',
-        'default_img': f'/static/images/spots/{sampleID}.jpeg',
+        'default_img': f"/static/images/spots/ACPMB6.jpeg"
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 
 @csrf_exempt
 def get_gene_list(request):
+    adata = load_adata("ACPMB006")
     genes = adata.var_names.tolist()
     return JsonResponse({"genes": genes})
 
@@ -35,23 +40,25 @@ def plot_gene_image(request):
         try:
             data = json.loads(request.body.decode("utf-8"))
             gene = data.get("gene")
+            adata = load_adata("ACPMB006")
+
             if not gene or gene not in adata.var_names:
                 return JsonResponse({"error": "Invalid gene"}, status=400)
 
-            output_dir = os.path.join("frontend", "static", "generated", sampleID)
+            output_dir = os.path.join("frontend", "static", "generated", "ACPMB6")
             os.makedirs(output_dir, exist_ok=True)
             img_path = os.path.join(output_dir, f"{gene}.png")
 
             sc.settings.set_figure_params(dpi=120, frameon=False, figsize=(4, 4), facecolor="black")
             plt.ioff()
             fig = sc.pl.spatial(
-                adata, color=[gene], library_id=sampleID,
+                adata, color=[gene], library_id="ACPMB6",
                 show=False, alpha=0.75, alpha_img=0.3, cmap="turbo", return_fig=True
             )
             fig.savefig(img_path, dpi=150)
             plt.close(fig)
 
-            return JsonResponse({"image_url": f"/static/generated/{sampleID}/{gene}.png"})
+            return JsonResponse({"image_url": f"/static/generated/ACPMB6/{gene}.png"})
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)
     return JsonResponse({"error": "Invalid request method"}, status=405)
