@@ -24,7 +24,8 @@ def acpmb002_page(request):
         'sample_id': 'ACPMB2',
         'pubid': 'ACPMB002',
         'method': 'Visium',
-        'default_img': f"/static/images/spots/ACPMB2.jpeg"
+        'default_img': f"images/spots/ACPMB2.jpeg" 
+
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 

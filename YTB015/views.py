@@ -24,7 +24,8 @@ def ytb015_page(request):
         'sample_id': 'YTB015',
         'pubid': 'YTB015',
         'method': 'Visium',
-        'default_img': f"/static/images/spots/YTB015.jpeg"
+        'default_img': f"images/spots/YTB015.jpeg"
+        
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 

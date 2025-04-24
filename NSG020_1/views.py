@@ -24,7 +24,8 @@ def nsg020_1_page(request):
         'sample_id': 'H23_25536',
         'pubid': 'NSG020_1',
         'method': 'Visium',
-        'default_img': f"/static/images/spots/H23_25536.jpeg"
+        'default_img': f"images/spots/H23_25536.jpeg"
+        
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 
