@@ -53,23 +53,40 @@ def plot_gene_image(request):
             img_path = os.path.join(output_dir, f"{gene}.png")
 
             # generate right fig：back matplotlib Figure and save it self
-            plt.ioff()
-            fig = sc.pl.spatial(
-                adata,
-                color=[gene],
-                library_id=sampleID,
-                show=False,
-                alpha=0.75, 
-                alpha_img=0.3,
-                cmap="turbo",
-                return_fig=True  
-            )
+            # plt.ioff()
+            # fig = sc.pl.spatial(
+            #     adata,
+            #     color=[gene],
+            #     library_id=sampleID,
+            #     show=False,
+            #     alpha=0.75, 
+            #     alpha_img=0.3,
+            #     cmap="turbo",
+            #     return_fig=True  
+            # )
             
-            fig.savefig(img_path, dpi=150)  # save
-            plt.close(fig)
+            # fig.savefig(img_path, dpi=150)  # save
+
+            if not os.path.exists(img_path):
+                plt.ioff()
+                figs = sc.pl.spatial(
+                    adata,
+                    color=[gene],
+                    library_id=sampleID,
+                    show=False,
+                    alpha=0.75, 
+                    alpha_img=0.3,
+                    cmap="turbo",
+                    return_fig=True  
+                )
+                fig = figs[0]  
+                fig.savefig(img_path, dpi=150)
+                plt.close(fig)
+
+            
 
             return JsonResponse({"image_url": f"/static/generated/{gene}.png"})
-            # return JsonResponse({"image_url": f"/static/generated/spots.png"})
+            
 
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)

@@ -52,12 +52,15 @@ def plot_gene_image(request):
 
             sc.settings.set_figure_params(dpi=120, frameon=False, figsize=(4, 4), facecolor="black")
             plt.ioff()
-            fig = sc.pl.spatial(
+
+            figs = sc.pl.spatial(
                 adata, color=[gene], library_id="2315332",
                 show=False, alpha=0.75, alpha_img=0.3, cmap="turbo", return_fig=True
             )
+            fig = figs[0]
             fig.savefig(img_path, dpi=150)
             plt.close(fig)
+
 
             return JsonResponse({"image_url": f"/static/generated/2315332/{gene}.png"})
         except Exception as e:
