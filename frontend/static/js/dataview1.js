@@ -1,6 +1,9 @@
 // 自动识别 SCRIPT_NAME 路径前缀（如 "/mb-granuloma"）
-const SCRIPT_NAME = window.location.pathname.includes('/mb-granuloma') ? '/mb-granuloma' : '';
+// const SCRIPT_NAME = window.location.pathname.includes('/mb-granuloma') ? '/mb-granuloma' : '';
 
+// 自动识别 SCRIPT_NAME 路径前缀（如 "/mb-granuloma/dataview1" 或 "/mb-granuloma/ACPMB003"）
+const pathParts = window.location.pathname.split("/").filter(Boolean);
+const SCRIPT_NAME = "/" + pathParts.slice(0, 2).join("/");
 // 页面滚动联动目录高亮逻辑
 const links = document.querySelectorAll("#list a[href^='#']");
 const titles = [];
@@ -55,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 1️ 加载基因列表
     function loadGeneList() {
-        fetch(`${SCRIPT_NAME}/dataview1/api/gene_list/`)
+        fetch(`${SCRIPT_NAME}/api/gene_list/`)
             .then(response => response.json())
             .then(data => {
                 if (data.genes) {
@@ -110,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 4️ 绘图函数
     function triggerGenePlot(gene) {
-        fetch(`${SCRIPT_NAME}/dataview1/api/plot_gene_image/`, {
+        fetch(`${SCRIPT_NAME}/api/plot_gene_image/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
