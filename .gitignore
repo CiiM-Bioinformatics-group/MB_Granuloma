@@ -5,3 +5,5 @@ venv_old/
 __pycache__/
 *.sqlite3
 *.h5ad
+myproject/settings.py
+error.log
