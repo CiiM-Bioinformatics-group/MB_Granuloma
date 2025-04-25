@@ -1,9 +1,12 @@
 // 自动识别 SCRIPT_NAME 路径前缀（如 "/mb-granuloma"）
 // const SCRIPT_NAME = window.location.pathname.includes('/mb-granuloma') ? '/mb-granuloma' : '';
 
-const pathParts = window.location.pathname.split("/").filter(Boolean);
-const SCRIPT_NAME = "/" + pathParts[0];
+// const pathParts = window.location.pathname.split("/").filter(Boolean);
+// const SCRIPT_NAME = "/" + pathParts[0];
 
+// 自动识别 SCRIPT_NAME 路径前缀（如 "/mb-granuloma/dataview1" 或 "/mb-granuloma/ACPMB003"）
+const pathParts = window.location.pathname.split("/").filter(Boolean);
+const SCRIPT_NAME = "/" + pathParts.slice(0, 2).join("/");
 
 // 页面滚动联动目录高亮逻辑
 const links = document.querySelectorAll("#list a[href^='#']");

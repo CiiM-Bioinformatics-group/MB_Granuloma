@@ -2,8 +2,9 @@
 from django.urls import path
 from . import views
 
+app_name = 'ACPMB016'
 urlpatterns = [
     path('', views.acpmb016_page, name='ACPMB016_page'),
-    path('api/gene_list/', views.get_gene_list),
-    path('api/plot_gene_image/', views.plot_gene_image),
+    path('gene_list/', views.get_gene_list),
+    path('plot_gene_image/', views.plot_gene_image),
 ]

@@ -57,10 +57,17 @@ def plot_gene_image(request):
                 adata, color=[gene], library_id="ACPMB4",
                 show=False, alpha=0.75, alpha_img=0.3, cmap="turbo", return_fig=True
             )
-            fig = figs[0]
+            
+            # 判断返回的是 list 还是单个 Figure
+
+            if isinstance(figs, list):
+                fig = figs[0]
+            else:
+                fig = figs
+
+            # 保存图像
             fig.savefig(img_path, dpi=150)
             plt.close(fig)
-
 
             return JsonResponse({"image_url": f"/static/generated/ACPMB4/{gene}.png"})
         except Exception as e:
