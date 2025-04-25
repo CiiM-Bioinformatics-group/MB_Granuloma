@@ -5,6 +5,12 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import os
 
+import logging
+
+#logger = logging.getLogger(__name__)
+logging.basicConfig(level='DEBUG')
+
+
 #  ban GUI backend，solve macOS crash problem
 import matplotlib
 matplotlib.use("Agg")  # use backend without GUI
@@ -52,6 +58,10 @@ def plot_gene_image(request):
             os.makedirs(output_dir, exist_ok=True)
             img_path = os.path.join(output_dir, f"{gene}.png")
 
+            print("loading...")
+
+            logging.critical("ajkdahj")
+
             # generate right fig：back matplotlib Figure and save it self
             # plt.ioff()
             # fig = sc.pl.spatial(
@@ -69,7 +79,7 @@ def plot_gene_image(request):
 
             if not os.path.exists(img_path):
                 plt.ioff()
-                figs = sc.pl.spatial(
+                ax = sc.pl.spatial(
                     adata,
                     color=[gene],
                     library_id=sampleID,
@@ -79,13 +89,14 @@ def plot_gene_image(request):
                     cmap="turbo",
                     return_fig=True  
                 )
-                fig = figs[0]  
+                fig = ax[0].get_figure() 
                 fig.savefig(img_path, dpi=150)
                 plt.close(fig)
 
             
+            logging.critical("jadsklfjsd")
 
-            return JsonResponse({"image_url": f"/static/generated/{gene}.png"})
+            return JsonResponse({"image_url": f"/mb-granuloma/static/generated/{gene}.png"})
             
 
         except Exception as e:

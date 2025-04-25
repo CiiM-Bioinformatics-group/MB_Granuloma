@@ -11,12 +11,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # 🔧 通过环境变量判断是否处于生产环境
 IS_PROD = os.getenv("DJANGO_PROD", "0") == "1"
+#IS_PROD = 1
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-ds$+u2h_eds$@%=az33yz4s02siky4tt5h#izbx(^d)=i08m62'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = not IS_PROD
+#DEBUG = not IS_PROD
+DEBUG = True
 
 ALLOWED_HOSTS = ['lab-li.ciim-hannover.de', '127.0.0.1', 'localhost']
 
