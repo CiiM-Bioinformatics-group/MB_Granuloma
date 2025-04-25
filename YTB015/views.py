@@ -24,7 +24,8 @@ def ytb015_page(request):
         'sample_id': 'YTB015',
         'pubid': 'YTB015',
         'method': 'Visium',
-        'default_img': f"/static/images/spots/YTB015.jpeg"
+        'default_img': f"images/spots/YTB015.jpeg"
+        
     }
     return render(request, 'dataview/view.html', {'dataset': dataset})
 
@@ -51,10 +52,20 @@ def plot_gene_image(request):
 
             sc.settings.set_figure_params(dpi=120, frameon=False, figsize=(4, 4), facecolor="black")
             plt.ioff()
-            fig = sc.pl.spatial(
+
+            figs = sc.pl.spatial(
                 adata, color=[gene], library_id="YTB015",
                 show=False, alpha=0.75, alpha_img=0.3, cmap="turbo", return_fig=True
             )
+            
+            # 判断返回的是 list 还是单个 Figure
+
+            if isinstance(figs, list):
+                fig = figs[0]
+            else:
+                fig = figs
+
+            # 保存图像
             fig.savefig(img_path, dpi=150)
             plt.close(fig)
 

@@ -8,7 +8,7 @@
     <title>mbAtlas | Datasets | Samples</title>
     <link rel="stylesheet" href="{% static 'css/dataview1.css' %}" />
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
-    <script src="{% static 'js/dataview1.js' %}" defer></script>
+    <script src="{% static 'js/dataview1view.js' %}" defer></script>
 </head>
 <body>
     <header>
@@ -134,7 +134,9 @@
                         <input type="color" value="#ADD93F" />
                     </nav>
                     <div class="main-image-container">
-                        <img id="image-display" src="{{ dataset.default_img }}" style="max-width: 90%; margin-top: 20px;" />
+                    
+                        <img id="image-display" src="{% static dataset.default_img %}" style="max-width: 90%; margin-top: 20px;" />
+
                     </div>
                     <section></section>
                 </main>
