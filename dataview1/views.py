@@ -66,10 +66,9 @@ def plot_gene_image(request):
             # )
             
             # fig.savefig(img_path, dpi=150)  # save
-
             if not os.path.exists(img_path):
                 plt.ioff()
-                figs = sc.pl.spatial(
+                ax = sc.pl.spatial(
                     adata,
                     color=[gene],
                     library_id=sampleID,
@@ -79,13 +78,13 @@ def plot_gene_image(request):
                     cmap="turbo",
                     return_fig=True  
                 )
-                fig = figs[0]  
+                fig = ax[0].get_figure() 
                 fig.savefig(img_path, dpi=150)
                 plt.close(fig)
 
             
 
-            return JsonResponse({"image_url": f"/static/generated/{gene}.png"})
+            return JsonResponse({"image_url": f"/mb-granuloma/static/generated/{gene}.png"})
             
 
         except Exception as e:
