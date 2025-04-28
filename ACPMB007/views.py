@@ -55,7 +55,7 @@ def plot_gene_image(request):
                 ax = sc.pl.spatial(
                     adata,
                     color=[gene],
-                    library_id=sampleID,
+                    library_id='ACPMB7',
                     show=False,
                     alpha=0.75, 
                     alpha_img=0.3,
