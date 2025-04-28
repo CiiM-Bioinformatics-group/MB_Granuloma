@@ -76,7 +76,6 @@ def plot_gene_image(request):
             # )
             
             # fig.savefig(img_path, dpi=150)  # save
-
             if not os.path.exists(img_path):
                 plt.ioff()
                 ax = sc.pl.spatial(

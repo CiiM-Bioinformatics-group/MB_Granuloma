@@ -21,7 +21,7 @@ def acpmb016_page(request):
         'sex': 'F',
         'bacteria': 'M. avium',
         'slide_number': 'V53F21-127',
-        'sample_id': 'ACPMB16',
+        'sample_id': 'ACPMB016',
         'pubid': 'ACPMB016',
         'method': 'Visium',
         'default_img': f"images/spots/ACPMB16.jpeg"
@@ -50,26 +50,23 @@ def plot_gene_image(request):
             os.makedirs(output_dir, exist_ok=True)
             img_path = os.path.join(output_dir, f"{gene}.png")
 
-            sc.settings.set_figure_params(dpi=120, frameon=False, figsize=(4, 4), facecolor="black")
-            plt.ioff()
+            if not os.path.exists(img_path):
+                plt.ioff()
+                ax = sc.pl.spatial(
+                    adata,
+                    color=[gene],
+                    library_id=sampleID,
+                    show=False,
+                    alpha=0.75, 
+                    alpha_img=0.3,
+                    cmap="turbo",
+                    return_fig=True  
+                )
+                fig = ax[0].get_figure() 
+                fig.savefig(img_path, dpi=150)
+                plt.close(fig)
 
-            figs = sc.pl.spatial(
-                adata, color=[gene], library_id="ACPMB16",
-                show=False, alpha=0.75, alpha_img=0.3, cmap="turbo", return_fig=True
-            )
-            
-            # 判断返回的是 list 还是单个 Figure
-
-            if isinstance(figs, list):
-                fig = figs[0]
-            else:
-                fig = figs
-
-            # 保存图像
-            fig.savefig(img_path, dpi=150)
-            plt.close(fig)
-
-            return JsonResponse({"image_url": f"/static/generated/ACPMB16/{gene}.png"})
+            return JsonResponse({"image_url": f"/mb-granuloma/static/generated/ACPMB16/{gene}.png"})
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)
     return JsonResponse({"error": "Invalid request method"}, status=405)
