@@ -422,9 +422,6 @@ options(repr.plot.width = 10, repr.plot.height = 30)
 ht1 <- netAnalysis_signalingRole_heatmap(cellchat, pattern = "outgoing", width = 6, height = 50, font.size = 16, font.size.title = 20, color.use = group.colors)
 ht2 <- netAnalysis_signalingRole_heatmap(cellchat, pattern = "incoming", width = 6, height = 50, font.size = 16, font.size.title = 20, color.use = group.colors)
 
-ht1
-
-ht2
 
 library(NMF)
 library(ggalluvial)
@@ -440,7 +437,6 @@ cellchat <- identifyCommunicationPatterns(cellchat, pattern = c("outgoing", "inc
                                           height = 6)
 
 p <- identifyCommunicationPatterns(cellchat, pattern = "outgoing", k = nPatterns, color.use = group.colors)
-p
 
 # river plot
 options(repr.plot.width = 9, repr.plot.height = 6.5) 
@@ -471,8 +467,7 @@ netVisual_heatmap(cellchat, measure = "count", color.heatmap = "Reds", font.size
 
 options(repr.plot.width = 4, repr.plot.height = 3) 
 netVisual_heatmap(cellchat, measure = "weight", color.heatmap = "Reds", font.size = 10, color.use = group.colors)
-#> Do heatmap based on a single object
 
-str(cellchat)
+
 
 
