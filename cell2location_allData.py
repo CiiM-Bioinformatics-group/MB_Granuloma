@@ -54,7 +54,7 @@ def read_and_qc(sample_name, file, path):
     
     return adata
 
-samples = pd.read_csv("/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/sampleIndex.txt", sep=",")
+samples = pd.read_csv("/PATH/sampleIndex.txt", sep=",")
 samples = samples[(samples.quality!="bad") & (samples.batch!="skin")]
 
 
@@ -62,16 +62,16 @@ samples = samples.sampleID.values
 print(torch.cuda.is_available())
 
 for sample in samples:
-    results_folder = '/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/cell2location/'
+    results_folder = '/PATH//cell2location/'
     # create paths and names to results folders for reference regression and cell2location models
     run_name = f'{results_folder}/{sample}_cell2location_map'
     sb.run(f'mkdir {run_name}', shell=True)
-    path = "/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Outputs_fromSpaceranger/"+sample+"/outs/"
+    path = "/PATH/Outputs_fromSpaceranger/"+sample+"/outs/"
     adata_vis = read_and_qc(sample, sample, path)
 
 
-    adata_ref = sc.read_h5ad("/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Analysis/results_Cell2Loc/Granuloma_analysis/reference_signatures/sc.h5ad")
-    mod = cell2location.models.RegressionModel.load("/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Analysis/results_Cell2Loc/Granuloma_analysis/reference_signatures/", 
+    adata_ref = sc.read_h5ad("/PATH/reference_signatures/sc.h5ad")
+    mod = cell2location.models.RegressionModel.load("/PATH/results_Cell2Loc/Granuloma_analysis/reference_signatures/", 
                                                 adata_ref)
 
 
