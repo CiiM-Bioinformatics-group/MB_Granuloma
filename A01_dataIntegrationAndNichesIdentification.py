@@ -35,7 +35,7 @@ sc.settings.set_figure_params(dpi=100, frameon=False, figsize=(4, 4), facecolor=
 
 # in this cell data from different samples would be combined
 # Paths to your Visium datasets
-df_sample = pd.read_csv("/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/sampleIndex.tsv", sep="\t")
+df_sample = pd.read_csv("/PATH/sampleIndex.tsv", sep="\t")
 df_sample = df_sample[df_sample.batch!="skin"]
 
 # Paths to your Visium datasets
@@ -48,7 +48,7 @@ sample_id = df_sample[(df_sample.batch!="MTB_batch0" ) &
                         (df_sample["sampleID"]!="YTB013")].sampleID
 sample_id = sample_id.to_list()
 print(sample_id, "\n", len(sample_id))
-data_path = "/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Outputs_fromSpaceranger/"
+data_path = "/PATH/Outputs_fromSpaceranger/"
 
 # Load each sample
 adata_list = [sc.read_visium(data_path+sample+"/outs/") for sample in sample_id]
@@ -191,7 +191,7 @@ import liana as li
 
 
 # check markers gene of different cell types
-df_markerGenes = pd.read_csv("/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Analysis/MTB_Granuloma_Marker_Genes_from_Leo.tsv", sep="\t")
+df_markerGenes = pd.read_csv("/PATH/Analysis/MTB_Granuloma_Marker_Genes_from_Leo.tsv", sep="\t")
 markers = {key: [x for x in list(df_markerGenes[key]) if str(x) != 'nan'][:] for key in df_markerGenes.columns if key!="AT1/AT2"}
 
 # Query Omnipath and get PanglaoDB
@@ -705,7 +705,7 @@ for sample in adatas.obs['batch'].unique():
     plt.show()
 
 
-adatas.write_h5ad('/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Anndata/AllDataHarmolized_01.h5ad')
+adatas.write_h5ad('/PATH/Anndata/AllDataHarmolized_01.h5ad')
 
 # Define var_group_labels that match `groupby` categories
 var_group_labels = adatas.obs['Spots'].unique().tolist()  # Or any other logic to get matching labels
