@@ -16,7 +16,7 @@ options(future.globals.maxSize = 10*2 * 1024^3)  # 2 GB * 10
 # reticulate::use_python("/vol/projects/jxun/.R_env/bin/python", required=T) 
 # ad <- read_h5ad(("/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Anndata/AllDataHarmolized_01.h5ad"))
 
-sce <- zellkonverter::readH5AD(file = "/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Anndata/G_niches.h5ad")
+sce <- zellkonverter::readH5AD(file = "/PATH/G_niches.h5ad")
 # retrieve all the available assays within sce objec
 
 str(sce)
@@ -71,7 +71,7 @@ cellchat <- aggregateNet(cellchat)
 # print(as.numeric(execution.time, units = "secs"))
 
 rm(list=ls())
-load("/vol/projects/BIIM/Spatial_Transcriptomics_Projects/MTB_Granuloma/Anndata/G_niches.Rdata")
+load("/PATH/G_niches.Rdata")
 ls()
 
 # head(cellchat@net)|
